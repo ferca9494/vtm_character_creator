@@ -1,0 +1,15 @@
+export default [
+    "Brujah",
+    "Gangrel",
+    "Malkavian",
+    "Nosferatu",
+    "Toreador",
+    "Tremere",
+    "Ventrue",
+    "Assamita",
+    "Giovanni",
+    "Ravnos",
+    "Seguidor de Set",
+    "Lasombra",
+    "Tzimisce",
+  ];

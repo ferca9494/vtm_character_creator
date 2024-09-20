@@ -1,0 +1,7 @@
+@media (max-width: 991px) {
+  
+    #playerdata {
+      min-width: 50%;
+      display: block;
+    }
+  }
