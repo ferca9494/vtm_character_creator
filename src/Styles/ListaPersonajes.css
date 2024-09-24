@@ -1,0 +1,68 @@
+#main {
+    display: flex;
+    justify-content: center;
+}
+
+#listaPersonajes {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: flex-start;
+}
+
+#listaPersonajes .personaje {
+    width: 200px;
+    height: 250px;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.ClanMiniLogo {
+    position: absolute;
+    width: 5vh;
+    padding-left: 50px;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    background-color: cadetblue;
+    border-radius: 100%;
+}
+
+@media (max-width: 1200px) {
+    #listaPersonajes {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: center;
+    }
+
+    #listaPersonajes .personaje {
+        width: 150px;
+        height: 200px;
+        flex-wrap: wrap;
+        margin: 10px;
+    }
+
+    .avatar {
+        width: 150px;
+        height: 150px;
+        background-color: cadetblue;
+        border-radius: 100%;
+    }
+}
+
+section {
+    margin-top: 20px;
+}
+
+select, input {
+    width:200px;
+}

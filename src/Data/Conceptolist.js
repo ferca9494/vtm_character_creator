@@ -93,6 +93,7 @@ export default [
       "Agente gubernamental",
       "Detective privado",
       "Cazador de brujas",
+      "Otro",
     ],
   },
   {
@@ -119,7 +120,14 @@ export default [
   },
   {
     tipo: "Profesional",
-    ejemplos: ["Ingeniero", "Doctor", "Programador", "Abogado", "Industrial"],
+    ejemplos: [
+      "Ingeniero",
+      "Doctor",
+      "Programador",
+      "Abogado",
+      "Industrial",
+      "Otro",
+    ],
   },
   {
     tipo: "Otro",

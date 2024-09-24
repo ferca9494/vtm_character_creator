@@ -1,0 +1,24 @@
+#playerdata {
+    min-width: 50%;
+    display: flex;
+}
+
+#playerdata div {
+    flex: auto;
+}
+
+#ClanLogo {
+    width: 25vh;
+}
+
+#ClanName {
+    width: 25vh;
+}
+
+@media (max-width: 991px) {
+
+    #playerdata {
+        min-width: 50%;
+        display: block;
+    }
+}
