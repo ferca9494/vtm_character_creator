@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+
 import { Link } from "react-router-dom";
 import "../../Styles/ListaPersonajes.css";
+import Clans from "../../Data/Clanlist.js";
 
 function ListaPersonajes() {
+  // Estado inicial que intenta obtener el valor de localStorage
+  const [listaPersonajes, setListaPersonajes] = useState(() => {
+    const datoGuardado = localStorage.getItem("listaPersonajes");
+    return datoGuardado ? JSON.parse(datoGuardado) : [];
+  });
+
   return (
     <div className="App">
       <header className="App-header">
@@ -12,62 +20,26 @@ function ListaPersonajes() {
       </header>
       <section id="main">
         <section id="listaPersonajes">
-          <div class="personaje">
-            <div class="avatar">
-              <img
-                src={require("../../Assets/img/Clans/Tremere/LogoClanTremere.webp")}
-                class="ClanMiniLogo"
-                alt=""
-              />
-            </div>
-            <br />
-            Juan Tremere
-          </div>
-          <div class="personaje">
-            <div class="avatar">
-              <img
-                src={require("../../Assets/img/Clans/Tzimisce/LogoClanTzimisce.webp")}
-                class="ClanMiniLogo"
-                alt=""
-              />
-            </div>
-            <br />
-            Rodrigo Tzimisce
-          </div>
-          <div class="personaje">
-            <div class="avatar">
-              <img
-                src={require("../../Assets/img/Clans/Lasombra/LogoClanLasombra.webp")}
-                class="ClanMiniLogo"
-                alt=""
-              />
-            </div>
-            <br />
-            Fabiana Lasombra
-          </div>
-          <div class="personaje">
-            <div class="avatar">
-              <img
-                src={require("../../Assets/img/Clans/Ravnos/LogoClanRavnos.webp")}
-                class="ClanMiniLogo"
-                alt=""
-              />
-            </div>
-            <br />
-            Gustavo Ravnos
-          </div>
-          <div class="personaje">
-            <div class="avatar">
-              <img
-                src={require("../../Assets/img/Clans/Nosferatu/LogoClanNosferatu.webp")}
-                class="ClanMiniLogo"
-                alt=""
-              />
-            </div>
-            <br />
-            Segismundo Nosferatu
-          </div>
-         
+          {listaPersonajes.map((item, index) => {
+            let clanimg = Clans.find((elem) => elem.name == item.clan).logoImg;
+
+            return (
+              <div class="personaje">
+                <div class="avatar">
+                  <img
+                    src={require("../../Assets/img/Clans/" +
+                      item.clan +
+                      "/" +
+                      clanimg)}
+                    class="ClanMiniLogo"
+                    alt=""
+                  />
+                </div>
+                <br />
+                {item.nombre}
+              </div>
+            );
+          })}
         </section>
       </section>
     </div>

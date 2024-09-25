@@ -1,35 +1,19 @@
 import React, { useState } from "react";
 import Conceptos from "../../Data/Conceptolist.js";
 
-const ConceptosReact = () => {
-  const [selectedConceptosValue, setSelectedConceptosValue] = useState(
-    Conceptos[0].tipo
-  );
-  const [selectedConceptosEjemploValue, setSelectedConceptosEjemploValue] =
-    useState("");
-  const [disabledOther, setDisabledOther] = useState(true);
-
-  const handleConceptosOption = (event) => {
-    setSelectedConceptosValue(event.target.value);
-    setDisabledOther(selectedConceptosEjemploValue != "Otro");
-    console.log(event.target.value);
-    console.log(selectedConceptosValue);
-  };
-
-  const handleConceptosEjemploOption = (event) => {
-    setSelectedConceptosEjemploValue(event.target.value);
-    setDisabledOther(event.target.value != "Otro");
-
-    console.log(event.target.value);
-    console.log(selectedConceptosEjemploValue);
-  };
-
+const ConceptosReact = ({
+  ConceptoValue,
+  onChangeConcepto,
+  onChangeConceptoExample,
+  disabledOther,
+  onChangedisabledOther,
+}) => {
   return (
     <>
       <select
         id="Concepto"
-        value={selectedConceptosValue}
-        onChange={handleConceptosOption}
+        onChange={onChangeConcepto}
+        disabled={!disabledOther}
       >
         {Conceptos.map((item, index) => (
           <option key={index} value={item.tipo}>
@@ -38,15 +22,22 @@ const ConceptosReact = () => {
         ))}
       </select>
       <br />
-      <select id="Concepto_ejemplo" onChange={handleConceptosEjemploOption}>
-        {Conceptos.find(
-          (elem) => elem.tipo == selectedConceptosValue
-        ).ejemplos.map((item, index) => (
-          <option key={index} value={item}>
-            {item}
-          </option>
-        ))}
+      <select
+        id="Concepto_ejemplo"
+        onChange={onChangeConceptoExample}
+        disabled={!disabledOther}
+      >
+        {Conceptos.find((elem) => elem.tipo == ConceptoValue).ejemplos.map(
+          (item, index) => (
+            <option key={index} value={item}>
+              {item}
+            </option>
+          )
+        )}
       </select>
+      <br />
+      <input type="checkbox" name="otro" onClick={onChangedisabledOther} />
+      <label htmlFor="otro">otro?</label>
       <br />
       <input type="text" name="Concepto" disabled={disabledOther} />
     </>

@@ -7,7 +7,6 @@ export default [
       "Pintor",
       "Adicto a las discotecas",
       "Modelo",
-      "Otro",
     ],
   },
   {
@@ -18,7 +17,6 @@ export default [
       "Playboy",
       "Adulador",
       "Soltero de oro",
-      "Otro",
     ],
   },
   {
@@ -30,12 +28,11 @@ export default [
       "Borracho",
       "Raver",
       "Adicto",
-      "Otro",
     ],
   },
   {
     tipo: "Chico",
-    ejemplos: ["Niño", "Fugado", "Proscrito", "Golfo", "Pandillero", "Otro"],
+    ejemplos: ["Niño", "Fugado", "Proscrito", "Golfo", "Pandillero"],
   },
   {
     tipo: "Criminal",
@@ -48,7 +45,6 @@ export default [
       "Matón",
       "Ratero",
       "Perista",
-      "Otro",
     ],
   },
   {
@@ -61,7 +57,6 @@ export default [
       "Peregrino",
       "Motorista",
       "Jugador",
-      "Otro",
     ],
   },
   {
@@ -71,7 +66,6 @@ export default [
       "Refugiado",
       "Minoría",
       "Teórico de conspiración",
-      "Otro",
     ],
   },
   {
@@ -82,7 +76,6 @@ export default [
       "Científico",
       "Filósofo",
       "Crítico social",
-      "Otro",
     ],
   },
   {
@@ -93,7 +86,6 @@ export default [
       "Agente gubernamental",
       "Detective privado",
       "Cazador de brujas",
-      "Otro",
     ],
   },
   {
@@ -104,7 +96,6 @@ export default [
       "Mano de obra",
       "Asalariado",
       "Albañil",
-      "Otro",
     ],
   },
   {
@@ -115,22 +106,14 @@ export default [
       "Consejero",
       "Asistente",
       "Escritor de discursos",
-      "Otro",
     ],
   },
   {
     tipo: "Profesional",
-    ejemplos: [
-      "Ingeniero",
-      "Doctor",
-      "Programador",
-      "Abogado",
-      "Industrial",
-      "Otro",
-    ],
+    ejemplos: ["Ingeniero", "Doctor", "Programador", "Abogado", "Industrial"],
   },
   {
-    tipo: "Otro",
+    tipo: "Otros",
     ejemplos: [
       "Veterinario",
       "Técnico",
@@ -140,7 +123,6 @@ export default [
       "Rebelde",
       "Periodista",
       "Mago",
-      "Otro",
     ],
   },
 ];

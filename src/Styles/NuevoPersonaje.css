@@ -9,6 +9,7 @@
 
 #ClanLogo {
     width: 25vh;
+    height: 25vh;
 }
 
 #ClanName {
@@ -21,4 +22,12 @@
         min-width: 50%;
         display: block;
     }
+}
+
+section {
+    margin-top: 20px;
+}
+
+select, input[type="text"] {
+    width: 200px;
 }

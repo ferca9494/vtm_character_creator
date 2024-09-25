@@ -1,19 +1,19 @@
 import Naturaleza from "../../Data/Arquetipolist.js";
 
-export const NaturalezasReact = () => {
+export const NaturalezasReact = ({ onChange }) => {
   return (
-    <select>
+    <select onChange={onChange}>
       {Naturaleza.map((item, index) => (
-        <option key={index} value={item}>
+        <option key={index + 1} value={item}>
           {item}
         </option>
       ))}
     </select>
   );
 };
-export const ConductasReact = () => {
+export const ConductasReact = ({ onChange }) => {
   return (
-    <select>
+    <select onChange={onChange}>
       <option key="0" value="(igual a Naturaleza)">
         (igual a Naturaleza)
       </option>

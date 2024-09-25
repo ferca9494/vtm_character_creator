@@ -1,54 +1,54 @@
 export default [
   {
     name: "Brujah",
-    logoImg: "/Tzimisce/LogoClanBrujah.webp",
+    logoImg: "LogoClanBrujah.webp",
   },
   {
     name: "Gangrel",
-    logoImg: "/Tzimisce/LogoClanGangrel.webp",
+    logoImg: "LogoClanGangrel.webp",
   },
   {
     name: "Malkavian",
-    logoImg: "/Tzimisce/LogoClanTzimisce.webp",
+    logoImg: "LogoClanMalkavian.webp",
   },
   {
     name: "Nosferatu",
-    logoImg: "/Tzimisce/LogoClanNosferatu.webp",
+    logoImg: "LogoClanNosferatu.webp",
   },
   {
     name: "Toreador",
-    logoImg: "/Tzimisce/LogoClanToreador.webp",
+    logoImg: "LogoClanToreador.webp",
   },
   {
     name: "Tremere",
-    logoImg: "/Tremere/LogoClanTremere.webp",
+    logoImg: "LogoClanTremere.webp",
   },
   {
     name: "Ventrue",
-    logoImg: "/Tzimisce/LogoClanVentrue.webp",
+    logoImg: "LogoClanVentrue.webp",
   },
   {
     name: "Assamita",
-    logoImg: "/Tzimisce/LogoClanAssamite.webp",
+    logoImg: "LogoClanAssamite.webp",
   },
   {
     name: "Giovanni",
-    logoImg: "/Tzimisce/LogoClanGiovanni.webp",
+    logoImg: "LogoClanGiovanni.webp",
   },
   {
     name: "Ravnos",
-    logoImg: "/Tzimisce/LogoClanRavnos.webp",
+    logoImg: "LogoClanRavnos.webp",
   },
   {
     name: "Seguidor de Set",
-    logoImg: "/Tzimisce/LogoClanFollowersofSet.webp",
+    logoImg: "LogoClanFollowersofSet.webp",
   },
   {
     name: "Lasombra",
-    logoImg: "/Tzimisce/LogoClanLasombra.webp",
+    logoImg: "LogoClanLasombra.webp",
   },
   {
     name: "Tzimisce",
-    logoImg: "/Tzimisce/LogoClanTzimisce.webp",
+    logoImg: "LogoClanTzimisce.webp",
   },
 ];
