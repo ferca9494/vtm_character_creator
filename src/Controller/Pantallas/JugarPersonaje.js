@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { Tirada } from "../Funciones/Tiradas.js";
-import { porcentual, distribución_binomial, potencia } from "../Funciones/Math.js";
+import {
+  porcentual,
+  distribución_binomial,
+  potencia,
+} from "../Funciones/Math.js";
 import "../../Styles/JugarPersonaje.css";
 
 /*
@@ -61,8 +65,12 @@ function JugarPersonaje() {
 
   let prob_1fallo_1dado = (diceDiff - 1) / 10;
 
-  let prob_1fallo_xdado = potencia(prob_1fallo_1dado,diceCant);
- 
+  let prob_1fallo_xdado = potencia(prob_1fallo_1dado, diceCant);
+
+  let prob_Xexito_xdado =
+    dicePass <= diceCant
+      ? distribución_binomial(dicePass, diceCant,prob_1exito_1dado)
+      : 0;
   return (
     <div className="App">
       <header className="App-header">
@@ -84,7 +92,7 @@ function JugarPersonaje() {
             max={10}
           />
           <br />
-          <label htmlFor="dificultad">Dificultad: {diffname[diceDiff]}</label>
+          <label htmlFor="dificultad">Dificultad <br />{diffname[diceDiff]}</label>
           <br />
           <input
             type="number"
@@ -110,7 +118,8 @@ function JugarPersonaje() {
         </div>
         <div id="probabilidades">
           <h2>Probabilidades</h2>
-          <p>Logrado: {porcentual(prob_1exito_xdado)}%</p>
+          <p>Logrado: {porcentual(prob_Xexito_xdado)}%</p>
+          <p>al menos 1 exito: {porcentual(1 - prob_1fallo_xdado)}%</p>
           <p>Fallo: {porcentual(prob_1fallo_xdado)}%</p>
         </div>
       </section>

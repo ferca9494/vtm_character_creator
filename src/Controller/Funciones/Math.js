@@ -9,7 +9,13 @@ export const combinatorio = (n, k) =>
 export const factorial = (n) => {
   if (n == 0) return 1;
 
-  return factorial(n - 1) * n;
+  let r = 1;
+    for (let i = 0; i < n; i++) {
+      r *= (n --);
+        
+    }
+
+  return r;
 };
 
 export const potencia = (b, p) => {
