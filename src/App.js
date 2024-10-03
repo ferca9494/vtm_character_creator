@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import ListaPersonajes from "./Controller/Pantallas/ListaPersonajes.js";
 import NuevoPersonaje from "./Controller/Pantallas/NuevoPersonaje.js";
+import JugarPersonaje from "./Controller/Pantallas/JugarPersonaje.js";
 
 function App() {
   // Estado inicial que intenta obtener el valor de localStorage
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<ListaPersonajes />} />
         <Route path="/nuevo" element={<NuevoPersonaje />} />
+        <Route path="/pj" element={<JugarPersonaje />} />
       </Routes>
     </Router>
   );

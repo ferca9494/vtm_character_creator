@@ -1,9 +1,9 @@
-#playerdata {
+.trisection {
     min-width: 50%;
     display: flex;
 }
 
-#playerdata div {
+.trisection div {
     flex: auto;
 }
 
@@ -18,7 +18,7 @@
 
 @media (max-width: 991px) {
 
-    #playerdata {
+    .trisection {
         min-width: 50%;
         display: block;
     }

@@ -10,6 +10,25 @@ import { NaturalezasReact, ConductasReact } from "../Arquetipos/Arquetipos.js";
 import ConceptosReact from "../Conceptos/Conceptos.js";
 import "../../Styles/NuevoPersonaje.css";
 
+/*
+NuevoPersonaje
+==============================================
+- introducir clan, consepto, naturaleza, conducta, nombre, jugador, cronica, generacion, sire
+- establecer puntos de atributos (7/5/3)
+- establecer habilidades (13/9/5)
+- establecer virtudes (virtudes:7/transfondos:5/disciplinas:3)
+- establecer humanidad (autocontrol + conciencia) 
+- establecer fuerza de voluntad (coraje)
+
+- establecer meritos y defectos (opcional)
+
+- rollear un d10 para ver la reserva de sangre (generacion 13)
+
+- mostrar descripciones de cada rasgo, clan, concepto, naturaleza, etc.
+
+- submitir y crear personaje
+
+*/
 function NuevoPersonaje() {
   const [selectClan, setSelectClan] = useState(Clans[0].name);
   const [selectNaturaleza, setSelectNaturaleza] = useState(Arquetipos[0]);
@@ -21,6 +40,7 @@ function NuevoPersonaje() {
   const [selectedConceptosEjemploValue, setSelectedConceptosEjemploValue] =
     useState("");
   const [disabledOther, setDisabledOther] = useState(true);
+  const [ConceptosOther, setConceptosOther] = useState("");
 
   // Estado inicial que intenta obtener el valor de localStorage
   const [nombre, setNombre] = useState("");
@@ -32,6 +52,23 @@ function NuevoPersonaje() {
   const [ClanImg, setClanImg] = useState(
     "/" + Clans[0].name + "/" + Clans[0].logoImg
   );
+  const [pFisicos, setPFisicos] = useState(7);
+
+  const [fuerza, setFuerza] = useState(1);
+  const [destreza, setDestreza] = useState(1);
+  const [resistencia, setResistencia] = useState(1);
+
+  const [pSocial, setPSocial] = useState(5);
+
+  const [carisma, setCarisma] = useState(1);
+  const [manipulacion, setManipulacion] = useState(1);
+  const [apariencia, setApariencia] = useState(1);
+
+  const [pMental, setPMental] = useState(3);
+
+  const [inteligencia, setInteligencia] = useState(1);
+  const [astucia, setAstucia] = useState(1);
+  const [percepcion, setPercepcion] = useState(1);
 
   const handleSelectClan = (event) => {
     let logoimg = Clans.find((elem) => elem.name == event.target.value).logoImg;
@@ -39,12 +76,15 @@ function NuevoPersonaje() {
     setSelectClan(event.target.value);
     setClanImg("/" + event.target.value + "/" + logoimg);
 
+    if (event.target.value == "Nosferatu") setApariencia(0);
+
     console.log(">>" + event.target.value);
   };
 
   const handleSelectNaturalezas = (event) => {
     setSelectNaturaleza(event.target.value);
   };
+
   const handleSelectConductas = (event) => {
     setSelectConducta(event.target.value);
   };
@@ -81,13 +121,27 @@ function NuevoPersonaje() {
     var nue_per = {
       nombre: nombre,
       jugador: jugador,
+      imagen: null,
       cronica: cronica,
       generacion: generacion,
       sire: sire,
       clan: selectClan,
       naturaleza: selectNaturaleza,
       conducta: selectConducta,
-      concepto: selectedConceptosValue + " - " + selectedConceptosEjemploValue,
+      concepto: disabledOther
+        ? selectedConceptosValue + " - " + selectedConceptosEjemploValue
+        : ConceptosOther,
+      atributos : {
+        fuerza: fuerza,
+        destreza: destreza,
+        resistencia: resistencia,
+        carisma: carisma,
+        manipulacion: manipulacion,
+        apariencia: apariencia,
+        percepcion: percepcion,
+        inteligencia: inteligencia,
+        astucia: astucia,
+      }
     };
 
     localStorage.setItem("nuevo_personaje", JSON.stringify(nue_per));
@@ -99,6 +153,20 @@ function NuevoPersonaje() {
     console.log("lista actualizada de los personajes:", lista_per);
   };
 
+  const setPAtribute = (e, raz, setRAZ, atr, setATR) => {
+    let _pATR = atr;
+    if (_pATR > 0) {
+      if (raz < e.target.value) setATR(--_pATR);
+      else setATR(++_pATR);
+      setRAZ(parseInt(e.target.value));
+    } else {
+      if (raz > e.target.value) {
+        setATR(++_pATR);
+        setRAZ(parseInt(e.target.value));
+      }
+    }
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -106,7 +174,7 @@ function NuevoPersonaje() {
         <Link to="/">volver</Link>
       </header>
 
-      <section id="playerdata">
+      <section id="playerdata" class="trisection">
         <div>
           <img
             src={require("../../Assets/img/Clans" + ClanImg)}
@@ -135,7 +203,8 @@ function NuevoPersonaje() {
             onChangeConcepto={handleConceptosOption}
             onChangeConceptoExample={handleConceptosEjemploOption}
             onChangedisabledOther={handleDisabledOther}
-            disabledOther={disabledOther}
+            Other={ConceptosOther}
+            setOther={setConceptosOther}
           />
           <br />
         </div>
@@ -189,7 +258,170 @@ function NuevoPersonaje() {
             name="sire"
           />
         </div>
-     
+      </section>
+      <section id="atributos" class="trisection">
+        <div>
+          <h3>Fisicos ({pFisicos})</h3>
+          Fuerza
+          <br />
+          <input
+            type="range"
+            name="fuerza"
+            value={fuerza}
+            onChange={(e) =>
+              setPAtribute(e, fuerza, setFuerza, pFisicos, setPFisicos)
+            }
+            min={1}
+            max={10}
+          />
+          {fuerza}
+          <br />
+          Destreza
+          <br />
+          <input
+            type="range"
+            name="destreza"
+            value={destreza}
+            onChange={(e) =>
+              setPAtribute(e, destreza, setDestreza, pFisicos, setPFisicos)
+            }
+            min={1}
+            max={10}
+          />
+          {destreza}
+          <br />
+          Resistencia
+          <br />
+          <input
+            type="range"
+            name="resistencia"
+            value={resistencia}
+            onChange={(e) =>
+              setPAtribute(
+                e,
+                resistencia,
+                setResistencia,
+                pFisicos,
+                setPFisicos
+              )
+            }
+            min={1}
+            max={10}
+          />
+          {resistencia}
+        </div>
+        <div>
+          <h3>Sociales ({pSocial})</h3>
+          Carisma
+          <br />
+          <input
+            type="range"
+            name="carisma"
+            value={carisma}
+            onChange={(e) =>
+              setPAtribute(e, carisma, setCarisma, pSocial, setPSocial)
+            }
+            min={1}
+            max={10}
+          />
+          {carisma}
+          <br />
+          Manipulacion
+          <br />
+          <input
+            type="range"
+            name="manipulacion"
+            value={manipulacion}
+            onChange={(e) =>
+              setPAtribute(
+                e,
+                manipulacion,
+                setManipulacion,
+                pSocial,
+                setPSocial
+              )
+            }
+            min={1}
+            max={10}
+          />
+          {manipulacion}
+          <br />
+          Apariencia
+          <br />
+          <input
+            type="range"
+            name="apariencia"
+            value={apariencia}
+            onChange={(e) => {
+              if (selectClan != "Nosferatu")
+                setPAtribute(e, apariencia, setApariencia, pSocial, setPSocial);
+            }}
+            min={1}
+            max={10}
+          />
+          {apariencia}
+        </div>
+        <div>
+          <h3>Mentales ({pMental})</h3>
+          Percepcion
+          <br />
+          <input
+            type="range"
+            name="percepcion"
+            value={percepcion}
+            onChange={(e) =>
+              setPAtribute(e, percepcion, setPercepcion, pMental, setPMental)
+            }
+            min={1}
+            max={10}
+          />
+          {percepcion}
+          <br />
+          Inteligencia
+          <br />
+          <input
+            type="range"
+            name="inteligencia"
+            value={inteligencia}
+            onChange={(e) =>
+              setPAtribute(
+                e,
+                inteligencia,
+                setInteligencia,
+                pMental,
+                setPMental
+              )
+            }
+            min={1}
+            max={10}
+          />
+          {inteligencia}
+          <br />
+          Astucia
+          <br />
+          <input
+            type="range"
+            name="astucia"
+            value={astucia}
+            onChange={(e) =>
+              setPAtribute(e, astucia, setAstucia, pMental, setPMental)
+            }
+            min={1}
+            max={10}
+          />
+          {astucia}
+        </div>
+      </section>
+      <section id="habilidades" class="trisection">
+        <div>
+          <h3>Talentos</h3>
+        </div>
+        <div>
+          <h3>Técnicas</h3>
+        </div>
+        <div>
+          <h3>Conocimientos</h3>
+        </div>
       </section>
       <section id="buttons">
         <input type="submit" id="submit" onClick={submit} />

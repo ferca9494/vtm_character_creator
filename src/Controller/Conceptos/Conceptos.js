@@ -7,6 +7,8 @@ const ConceptosReact = ({
   onChangeConceptoExample,
   disabledOther,
   onChangedisabledOther,
+  Other,
+  setOther
 }) => {
   return (
     <>
@@ -39,7 +41,13 @@ const ConceptosReact = ({
       <input type="checkbox" name="otro" onClick={onChangedisabledOther} />
       <label htmlFor="otro">otro?</label>
       <br />
-      <input type="text" name="Concepto" disabled={disabledOther} />
+      <input
+        type="text"
+        name="Concepto"
+        value={Other}
+        onChange={(e) => setOther(e.target.value)}
+        disabled={disabledOther}
+      />
     </>
   );
 };

@@ -23,22 +23,41 @@ function ListaPersonajes() {
           {listaPersonajes.map((item, index) => {
             let clanimg = Clans.find((elem) => elem.name == item.clan).logoImg;
 
-            return (
-              <div class="personaje">
-                <div class="avatar">
-                  <img
-                    src={require("../../Assets/img/Clans/" +
-                      item.clan +
-                      "/" +
-                      clanimg)}
-                    class="ClanMiniLogo"
-                    alt=""
-                  />
+            if (item.foto != null)
+              return (
+                <div class="personaje">
+                  <div class="avatar">
+                    <img
+                      src={require("../../Assets/img/Clans/" +
+                        item.clan +
+                        "/" +
+                        clanimg)}
+                      class="ClanMiniLogo"
+                      alt=""
+                    />
+                  </div>
+                  <br />
+                  {item.nombre}
                 </div>
-                <br />
-                {item.nombre}
-              </div>
-            );
+              );
+            else
+              return (
+                <div class="personaje">
+                  <div class="avatar">
+                    <Link to="/pj">
+                      <img
+                        src={require("../../Assets/img/Clans/" +
+                          item.clan +
+                          "/" +
+                          clanimg)}
+                        alt=""
+                      />
+                    </Link>
+                  </div>
+                  <br />
+                  {item.nombre}
+                </div>
+              );
           })}
         </section>
       </section>
