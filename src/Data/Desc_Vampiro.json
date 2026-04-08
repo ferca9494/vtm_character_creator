@@ -1,0 +1,551 @@
+{
+    "Sire": "",
+    "Refugio": "",
+    "Generacion": "la generación de tu perso­naje, muy relacionada con su clan, define la potencia de su sangre y el grado de alejamiento de Caín.",
+    "Generaciones": {
+        "1": "Cain",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": "",
+        "10": "",
+        "11": "",
+        "12": "",
+        "13": "",
+        "14": "",
+        "15": ""
+    },
+    "Clan": "el clan de tu personaje define su linaje y su relación con Caín, el padre de todos los vampiros. El clan determina los poderes y debilidades de tu personaje",
+    "Clanes": {
+        "Brujah": "Este clan está formado en gran parte por rebeldes, con o sin causa. Individualistas, locuaces y turbulentos, los Brujah sienten mucho afecto por la idea del cambio social, y en sus filas albergan a algunos de los más violentos vampiros de la Camarilla",
+        "Gangrel": "De todos los vampiros, los Gangrel son quizá los que están más cerca de su naturaleza interior. Estos nómadas solitarios se burlan de las constricciones de la sociedad, prefiriendo la comodidad de la vida salvaje. No se sabe cómo eluden la ira de los hombres lobo; puede que tenga algo que ver con el hecho de que los propios Gangrel sean cambiaformas. Cuando un mortal habla de un vampiro que se convierte en lobo o murciélago, probablemente habla de un Gangrel.",
+        "Malkavian": "Hasta los demás Condenados temen a los Malkavian. La sangre maldita de su clan ha contaminado sus mentes, con el resultado de que todos ellos están irremediablemente locos. Peor aún, su locura puede asumir casi cualquier forma, desde irresistibles tendencias homicidas hasta la catatonia. En muchos casos no hay forma de distinguir a un Malkavian de los miembros “sanos” de otros clanes. Los pocos cuyas psicosis son obvias están entre los vampiros más aterradores que acechan en las calles.",
+        "Nosferatu": "Los chiquillos de Caín reciben el nombre de “los Condenados”, y ningún vampiro lo refleja tanto como los desdichados Nosferatu. Mientras los demás Vástagos siguen pareciendo humanos y pueden mezclarse con la sociedad mortal, los Nosferatu están retorcidos y desfigurados por la maldición del vampirismo. Otros hablan de la marca que puso Caín sobre todo el clan por las monstruosas fechorías de su fundador Antediluviano. Sufren el desprecio y el rechazo de los demás Hijos de Caín, que los consideran repulsivos y sólo se relacionan con ellos si no hay más remedio.",
+        "Toreador": "A los Toreador se les llama muchas cosas: “degenerados”, “artistas”, “farsantes”, “hedonistas”... Pero cualquiera de estas etiquetas hace un flaco favor al clan. Dependiendo del individuo y de su estilo, los Toreador son elegantes y llamativos, brillantes y ridículos, visionarios y disipados. Quizá lo único que puede aplicarse con certeza a todos ellos es el celo estético de sus miembros. Haga lo que haga un Toreador, lo hace con pasión, y sea lo que sea, lo es con pasión.",
+        "Tremere": "Los reservados Tremere pueden ser vistos con odio, desconfianza, temor o desprecio, pero nunca con indiferencia. Los que han oído hablar de sus actos suelen sospechar de ellos... y con motivo, pues los Brujos se han ganado su apodo. Por sus propios medios han conseguido dominar una forma de magia vampírica con sus hechizos y rituales tan potente (si no más) como cualquier otro poder de la Sangre. Unido a la rígida jerarquía del clan y a la ardiente ambición tan común entre los Brujos, este poder es algo verdaderamente perturbador para quienes saben de lo que son capaces.",
+        "Ventrue": "Los Vástagos del clan Ventrue tienen una reputación de honorabilidad, gentileza y gusto impecable. Desde tiempos inmemoriales han sido el clan del liderazgo, haciendo cumplir las antiguas tradiciones y buscando dar forma al destino de los Vástagos. En las noches de antaño los Ventrue eran escogidos entre los nobles, los príncipes mercaderes y otros dueños del poder. Actualmente el clan recluta a sus miembros entre las acomodadas familias del “dinero viejo”, despiadados trepadores corporativos y políticos. Sea cual sea su origen, preservan la estabilidad y mantienen el orden en la Camarilla. ",
+        "Assamita": "De los desiertos de Oriente llegan los Assamitas, y llevan con ellos una nube de terror. Los Assamitas son conocidos en la sociedad vampírica como un clan de asesinos al servicio de cualquiera que pueda pagar su precio. Este precio es la vitae de otros Vástagos; para los Assamitas la diablerie es el mayor sacramento. ",
+        "Giovanni": "Los Giovanni son respetuosos, gentiles y educados. Rico más allá de lo imaginable, el clan Giovanni tiene sus raíces en una familia de príncipes comerciantes anterior al renacimiento. El clan conserva su hogar original en Venecia, una loggia de mil años de antigüedad justo fuera del centro. Ningún clan hace un espectáculo de la humildad y la propiedad como los Giovanni. Y ninguno esconde secretos tan blasfemos.",
+        "Ravnos": "Si algún clan fuese reconocido por su perverso sentido del humor, sería el Ravnos. Son embaucadores de primer orden, tejiendo ilusiones y mentiras en elaborados planes para separar a los tontos de cualquier cosa que deseen los Ravnos... ya sea riqueza, sangre o incluso la libertad de sus víctimas. Como Mefistófeles, o el Viejo Bribón, los Vástagos usan sus trucos con cualquiera con el que se topen, sea humano o vampiro, y ay de quien no pueda pagar los costes ocultos.",
+        "Seguidor de Set": "Los Seguidores de Set, o más comúnmente “Setitas”, son vistos con más desconfianza que cualquier otro clan. Sus lazos con la arquetípica Serpiente del mito son bien conocidos, y aumentados por sus perturbadores poderes. Son custodios de un conocimiento que, de acuerdo con lo que dice, es anterior incluso a la Primera Ciudad. Cuando entran en una ciudad, es casi inevitable que la estructura de poder de los Cainitas locales quede erosionada. Pero lo más perturbador de todo es que como clan comparten una oscura y poderosa fe: una fe en que la sangre de los dioses corre por sus frías venas.",
+        "Lasombra": "El clan Lasombra ha caído en desgracia... y sus miembros disfrutan de ello. A la vez elegantes y depredadores, los Lasombra guían (si es necesario, con el látigo) al Sabbat como una fuerza implacable. Volviendo la espalda a los humanos que fueron antaño, los Lasombra se entregan por completo a la oscura majestad del Abrazo. Asesinato, frenesí, depredación... ¿por qué temer a estas cosas, pregunta muchos Lasombra, si uno es un vampiro? Pero en contraste con los Tzimisce, por lo general los Lasombra no buscan rechazar todas las cosas mortales, sino modelarlas para su placer.",
+        "Tzimisce": "Si los Lasombra son el corazón del Sabbat, el clan Tzimisce es su alma. Hasta los demás vampiros se sienten incómodos cerca de estos siniestros Vástagos, y el apodo de “Demonios” les fue otorgado en noches del pasado por horrorizados miembros de otros clanes. La característica Disciplina de Vicisitud de los Tzimisce es el objeto de este temor; circulan historias de paralizantes deformidades provocadas por capricho, de fantasmales “experimentos” y torturas refinadas más allá de la comprensión y resistencia humana... o vampírica."
+    },
+    "Virtudes": {
+        "Coraje": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Instinto": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Conciencia": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Conviccion": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Autocontrol": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        }
+    },
+    "Reserva de Sangre": "la reserva de sangre de tu vampiro es un indicativo del hambre que le atormenta.",
+    "Humanidad/Senda": "estos Rasgos definen el punto de vista de tu personaje sobre la muerte. Los vampiros tienen un valor de Humanidad o una puntuación en una Senda específica, pero nunca ambas (aunque se pueda disimular…). La Humanidad es el Rasgo “por defecto”; las Sendas se presentan en el Apéndice.",
+    "Humanidad": {
+        "Desc": "",
+        "Niveles": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+            "10": ""
+        }
+    },
+    "Sendas": {
+        "Senda de la Sangre": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": "",
+                "9": "",
+                "10": ""
+            }
+        },
+        "Senda de los Huesos": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": "",
+                "9": "",
+                "10": ""
+            }
+        },
+        "Senda de la Metamorfosis": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": "",
+                "9": "",
+                "10": ""
+            }
+        },
+        "Senda de la Noche": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": "",
+                "9": "",
+                "10": ""
+            }
+        },
+        "Senda de la Paradoja": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": "",
+                "9": "",
+                "10": ""
+            }
+        },
+        "Senda del Tifón": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": "",
+                "9": "",
+                "10": ""
+            }
+        }
+    },
+    "Disciplinas": {
+        "Animalismo": {
+            "Desc": "La Bestia reside dentro de todas las criaturas, desde las ratas de las alcantarillas hasta los poderosos antiguos. La Disciplina del Animalismo permite al vampiro desarrollar una íntima e intensa conexión con su naturaleza primordial. No solo podrá comunicarse telepáticamente con las bestias menores, sino que también proyectará su propia fuerza de voluntad sobre ellas, obligándolas a cumplir sus deseos. Además, a medida que el vampiro crezca en poder podrá utilizar Animalismo para con trolar a la Bestia que reside en los mortales, e incluso en otros seres sobrenaturales. Un vampiro que carezca de esta Disciplina y de la Técnica Trato con Animales repelerá a las bestias, que se mostrarán inquietas en su presencia, a menudo hasta el punto de huir o de atacar. Por el contrario, esta Disciplina permite calmar Ce incluso atraer) a todos los animales menores. A los Gangrel se les reconoce como los maestros del Animalismo, aunque los clanes Nosferatu, Ravnos y Tzimisce disponen también de algún talento. Los Rasgos Manipulación y Carisma son vitales para los poderes de esta Disciplina. Cuanto más fuerte es la personalidad de un vampiro más fácilmente influirá en las criaturas.",
+            "Niveles": {
+                "1": {
+                    "Nombre": "Susurros Salvajes",
+                    "Descripcion": "Este poder es la base de la que crecen todos los demás poderes de Animalismo. El vampiro crea una conexión empática con una bestia, permitiéndole comunicarse con ella o darle órdenes sencillas. El Vástago cruza su mirada con la del animal y le transmite sus deseos por pura fuerza de voluntad. Aunque no es necesario sisear, trinar o ladrar, algunos vampiros encuentran más fácil al hacerlo crear una conexión con el animal. El contacto ocular debe ser constante: si se rompe habrá que restaurar la relación desde el principio. Como Susurros Salvajes requiere este contacto ocular, no podrá afectar a las criaturas sin visión. Además, cuanto más sencillo es un animal más complicado es entrar en contacto con su Bestia interior. Es relativamente fácil establecer comunicación con mamíferos, pájaros predadores y grandes reptiles. Los insectos, los invertebrados y casi todos los peces (con la posible excepción de los más grandes, como los tiburones) son demasiado simples y su Bestia es excesivamente débil.Este poder no garantiza que un animal quiera tratar con el vampiro, ni asegura que cumpla las órdenes recibidas. Sin embargo, como mínimo logra una mejor disposición de la criatura hacia el vampiro. El modo en el que el Vástago presenta sus deseos suele depender del tipo de animal. Es fácil amedrentar a las bestias menores para que obedezcan una orden, pero a los grandes depredadores es mejor dirigirse con peticiones amistosas. Si el vampiro emplea con éxito este poder el animal cumplirá la orden con toda la habilidad que le permita su intelecto. Solo las criaturas más brillantes pueden comprender las directrices complejas (órdenes condicionales o que requieran de un pensamiento abstracto). Las órdenes comprendidas quedarán profundamente implantadas en el animal, que podrá verse afectado por ellas durante un tiempo.",
+                    "Sistema": "para hablar con un animal no es necesaria tirada alguna, pero antes hay que establecer el contacto visual. Dar órdenes requiere de una tirada de Manipulación + Trato con Animales, dependiendo la dificultad de la criatura: los mamífero depredadores (lobos, felinos, insectívoros, murciélagos vampiros) tienen dificultad 6, los demás mamíferos y pájaros predadores (ratas, lechuzas) 7, otros pájaros y reptiles (palomas, serpientes) 8. Esta dificultad se reducirá en uno si el personaje habla con el animal en su “idioma nativo”, y puede verse afectada por otras circunstancias, como la actitud del jugador (recomendamos encarecidamente que se interprete cualquier comunicación entre los personajes y los animales). El número de éxitos que logre un personaje determinará hasta qué punto el animal queda afectado por la orden del vampiro. Un éxito sirve para que un gato siga a alguien o para que guíe al personaje hasta un lugar, tres bastarían para que un cuervo espiara a un objetivo durante semanas y cinco asegurarían que un oso grizzly protegiera ferozmente la entrada del refugio natural del personaje durante meses. El enfoque de estas conversaciones depende en gran medida de la Naturaleza del Personaje, que podría decantarse por la intimidación, el engaño, el engatusamiento, la racionalidad o el chantaje emocional. El personaje debe comprender que en estas situaciones no solo interpreta a su personaje, sino también a su Bestia Interior."
+                },
+                "2": {
+                    "Nombre": "",
+                    "Descripcion": "",
+                    "Sistema": ""
+                },
+                "3": {
+                    "Nombre": "",
+                    "Descripcion": "",
+                    "Sistema": ""
+                },
+                "4": {
+                    "Nombre": "",
+                    "Descripcion": "",
+                    "Sistema": ""
+                },
+                "5": {
+                    "Nombre": "",
+                    "Descripcion": "",
+                    "Sistema": ""
+                }
+            }
+        },
+        "Auspex": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Celeridad": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Dementacion": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Dominacion": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Extincion": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Fortaleza": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Nigromancia": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Obtenebracion": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Ofuscacion": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Potencia": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Presencia": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Protean": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Quimerismo": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Serpentis": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Taumaturgia": {
+            "Senda de la Sangre": {
+                "Desc": "",
+                "Niveles": {
+                    "1": "",
+                    "2": "",
+                    "3": "",
+                    "4": "",
+                    "5": ""
+                }
+            },
+            "El Encanto de las Llamas": {
+                "Desc": "",
+                "Niveles": {
+                    "1": "",
+                    "2": "",
+                    "3": "",
+                    "4": "",
+                    "5": ""
+                }
+            },
+            "Movimiento Mental": {
+                "Desc": "",
+                "Niveles": {
+                    "1": "",
+                    "2": "",
+                    "3": "",
+                    "4": "",
+                    "5": ""
+                }
+            },
+            "Senda de la Conjuración": {
+                "Desc": "",
+                "Niveles": {
+                    "1": "",
+                    "2": "",
+                    "3": "",
+                    "4": "",
+                    "5": ""
+                }
+            },
+            "Manos de Destrucción": {
+                "Desc": "",
+                "Niveles": {
+                    "1": "",
+                    "2": "",
+                    "3": "",
+                    "4": "",
+                    "5": ""
+                }
+            },
+            "Rituales": {
+                "Desc": "",
+                "Rituales": {
+                    "Defensa del Refugio Sagrado": "",
+                    "Despertar con la Frescura de la Tarde": "",
+                    "Comunicación con el Sire del Vástago": "",
+                    "Desviación de la Muerte de Madera": "",
+                    "El Toque del Diablo": "",
+                    "Protección Contra Ghouls": "",
+                    "Foco de Infusión de Vitae": "",
+                    "Paso Incorpóreo": "",
+                    "Escudo de Presencia Inmunda": "",
+                    "Hueso de Mentiras": "",
+                    "Contrato de Sangre": ""
+                }
+            }
+        },
+        "Vicisitud": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        }
+    },
+    "Transfondos": {
+        "Aliados": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Criados": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Contactos": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Fama": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Generación": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Influencia": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Mentor": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Posición": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Rebaño": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Recursos": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        }
+    }
+}

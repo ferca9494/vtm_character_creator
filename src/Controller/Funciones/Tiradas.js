@@ -14,6 +14,7 @@ export function Tirada(cantidad, dificultad = 6, exitos = 1) {
   let resultado_tiradas = {
     resultado: "",
     exitos: 0,
+    dificultad: dificultad,
     logrado: false,
     tirada: [],
   };

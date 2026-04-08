@@ -1,68 +1,72 @@
-import React, { useState } from "react";
-
+import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import "../../Styles/ListaPersonajes.css";
 import Clans from "../../Data/Clanlist.js";
+import { Header } from "../Componentes/header.js";
+
+const CLAN_IMAGES = {};
+Clans.forEach(clan => {
+  CLAN_IMAGES[clan.name] = clan.logoImg;
+});
 
 function ListaPersonajes() {
-  // Estado inicial que intenta obtener el valor de localStorage
   const [listaPersonajes, setListaPersonajes] = useState(() => {
-    const datoGuardado = localStorage.getItem("listaPersonajes");
-    return datoGuardado ? JSON.parse(datoGuardado) : [];
+    try {
+      const datoGuardado = localStorage.getItem("listaPersonajes");
+      return datoGuardado ? JSON.parse(datoGuardado) : [];
+    } catch {
+      return [];
+    }
   });
+
+  const personajesMemo = useMemo(() => {
+    return listaPersonajes.map((item, index) => {
+
+
+      let imageSrc = null
+      const hasPhoto = item.foto != null;
+      let clanimg = null;
+
+      if (item.tipo == "Vampiro") {
+
+        clanimg = CLAN_IMAGES[item.RasgosVampiricos.clan];
+        imageSrc = require(`../../Assets/img/Clans/${item.RasgosVampiricos.clan}/${clanimg}`);
+      }
+
+      return {
+        ...item,
+        index,
+        clanimg,
+        imageSrc,
+        hasPhoto
+      };
+    });
+  }, [listaPersonajes]);
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h2>Lista de Personajes</h2>
-        <br />
-        <Link to="/nuevo">Nuevo Personaje</Link>
-      </header>
+      <Header namepage="Lista de Personajes" active={1} />
       <section id="main">
         <section id="listaPersonajes">
-          {listaPersonajes.map((item, index) => {
-            let clanimg = Clans.find((elem) => elem.name == item.clan).logoImg;
-
-            if (item.foto != null)
-              return (
-                <div class="personaje">
-                  <div class="avatar">
-                    <img
-                      src={require("../../Assets/img/Clans/" +
-                        item.clan +
-                        "/" +
-                        clanimg)}
-                      class="ClanMiniLogo"
-                      alt=""
-                    />
-                  </div>
-                  <br />
-                  {item.nombre}
-                </div>
-              );
-            else
-              return (
-                <div class="personaje">
-                  <div class="avatar">
-                    <Link to="/pj">
-                      <img
-                        src={require("../../Assets/img/Clans/" +
-                          item.clan +
-                          "/" +
-                          clanimg)}
-                        alt=""
-                      />
-                    </Link>
-                  </div>
-                  <br />
-                  {item.nombre}
-                </div>
-              );
-          })}
+          {personajesMemo.map((item) => (
+            <div key={item.index} className="personaje">
+              <div className="avatar vampire">
+                {item.hasPhoto ? (
+                  <img src={item.imageSrc} className="ClanMiniLogo" alt="" />
+                ) : (
+                  <Link to={"/pj/" + item.index}>
+                    <img src={item.imageSrc} alt="" />
+                  </Link>
+                )}
+              </div>
+              <br />
+              {item.nombre}
+            </div>
+          ))}
         </section>
       </section>
     </div>
   );
 }
 
-export default ListaPersonajes;
+export default React.memo(ListaPersonajes);

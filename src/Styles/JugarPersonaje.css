@@ -1,5 +1,4 @@
-
-#dados{
+#dados {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -10,8 +9,60 @@
     flex-direction: row;
 }
 
-#form_tirada{
+#form_tirada {
     display: flex;
     justify-content: space-evenly;
     align-items: start;
+}
+
+#secciones {
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+}
+
+#HistorialTiradas {
+    height: 400pt;
+    width: auto;
+    overflow-x: clip;
+    overflow-y: auto;
+}
+
+.exito {
+    background-color: green;
+    border-radius: 10px;
+    padding: 4px;
+    color: white
+}
+
+.failure {
+    background-color: red;
+    border-radius: 10px;
+    padding: 4px;
+    color: white
+}
+
+@media (max-width: 991px) {
+
+    #secciones {
+
+        display: block;
+        align-items: flex-start;
+        justify-content: space-evenly;
+
+    }
+
+
+}
+
+@media print {
+  body * {
+    display: none;
+  }
+
+  .printable, .printable * {
+    display: block;
+  }
 }

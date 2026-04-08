@@ -7,6 +7,12 @@
     flex: auto;
 }
 
+#ClanSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #ClanLogo {
     width: 25vh;
     height: 25vh;
@@ -15,7 +21,10 @@
 #ClanName {
     width: 25vh;
 }
-
+#ClanDesc {
+    width:250px;
+    font-size: 8px;
+}
 @media (max-width: 991px) {
 
     .trisection {

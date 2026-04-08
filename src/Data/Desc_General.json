@@ -1,0 +1,126 @@
+{
+    "Nombre": "",
+    "Jugador": "",
+    "Cronica": "",
+    "Concepto": "",
+    "Naturaleza": "",
+    "Conducta": "",
+    "Atributos": {
+        "Fuerza": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Destreza": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Resistencia": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Carisma": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Manipulacion": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Apariencia": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Percepcion": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Inteligencia": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        },
+        "Astucia": {
+            "Desc": "",
+            "Niveles": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": ""
+            }
+        }
+    },
+    "Voluntad": {
+        "Desc": "",
+        "Niveles": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+            "10": ""
+        }
+    },
+    "Trasfondo": "",
+    "Salud": "",
+    "Tipos_Salud": {
+        "Mangullado": "",
+        "Lastimado": "",
+        "Lesionado": "",
+        "Herido": "",
+        "Malherido": "",
+        "Tullido": "",
+        "Incapacitado": ""
+    }
+}

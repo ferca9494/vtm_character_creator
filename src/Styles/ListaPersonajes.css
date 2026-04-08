@@ -37,6 +37,12 @@
     width: 100%;
     margin: 0px;
 }
+.mage{
+    background-color: rgb(153, 50, 221)!important;
+}
+.vampire{
+    background-color: rgb(160, 95, 95)!important;
+}
 
 @media (max-width: 1200px) {
     #listaPersonajes {
