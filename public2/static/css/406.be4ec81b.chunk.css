@@ -1,0 +1,2 @@
+.trisection{display:flex;min-width:50%}.trisection div{flex:auto}#ClanSection{align-items:center;display:flex;flex-direction:column}#ClanLogo{height:25vh}#ClanLogo,#ClanName{width:25vh}#ClanDesc{font-size:8px;width:250px}@media (max-width:991px){.trisection{display:block;min-width:50%}}section{margin-top:20px}input[type=text],select{width:200px}
+/*# sourceMappingURL=406.be4ec81b.chunk.css.map*/

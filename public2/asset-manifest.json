@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a7a6e0fa.css",
+    "main.js": "/static/js/main.e8695384.js",
+    "static/css/429.baffb7c8.chunk.css": "/static/css/429.baffb7c8.chunk.css",
+    "static/js/429.12d125a2.chunk.js": "/static/js/429.12d125a2.chunk.js",
+    "static/css/406.be4ec81b.chunk.css": "/static/css/406.be4ec81b.chunk.css",
+    "static/js/406.83bebaf5.chunk.js": "/static/js/406.83bebaf5.chunk.js",
+    "static/css/351.957cdbd9.chunk.css": "/static/css/351.957cdbd9.chunk.css",
+    "static/js/351.5ae5b737.chunk.js": "/static/js/351.5ae5b737.chunk.js",
+    "static/css/498.957cdbd9.chunk.css": "/static/css/498.957cdbd9.chunk.css",
+    "static/js/498.b9c445aa.chunk.js": "/static/js/498.b9c445aa.chunk.js",
+    "static/media/LogoClanGiovanni.webp": "/static/media/LogoClanGiovanni.b656deee8f2b108cdf76.webp",
+    "static/media/LogoClanTzimisce.webp": "/static/media/LogoClanTzimisce.78f15b388a84a895a69e.webp",
+    "static/media/LogoClanAssamite.webp": "/static/media/LogoClanAssamite.881625d1af567f0a17c8.webp",
+    "static/media/LogoClanBrujah.webp": "/static/media/LogoClanBrujah.639a01fc81375401a629.webp",
+    "static/media/LogoClanToreador.webp": "/static/media/LogoClanToreador.b529481d116ff03c85b1.webp",
+    "static/media/LogoClanNosferatu.webp": "/static/media/LogoClanNosferatu.c9e5898e5f02af6dd8c3.webp",
+    "static/media/LogoClanMalkavian.webp": "/static/media/LogoClanMalkavian.0ec659a7f37c39fa450d.webp",
+    "static/media/LogoClanFollowersofSet.webp": "/static/media/LogoClanFollowersofSet.3b88937bd27477a375bc.webp",
+    "static/media/LogoClanLasombra.webp": "/static/media/LogoClanLasombra.3b80e1dd21feb3ee3244.webp",
+    "static/media/LogoClanTremere.webp": "/static/media/LogoClanTremere.0530ee1679a02b157e85.webp",
+    "static/media/LogoClanGangrel.webp": "/static/media/LogoClanGangrel.afc2899d4021c6977ec0.webp",
+    "static/media/LogoClanVentrue.webp": "/static/media/LogoClanVentrue.a39725066e00ab6fed88.webp",
+    "static/media/LogoClanRavnos.webp": "/static/media/LogoClanRavnos.f0d11f1790de0bd48b5d.webp",
+    "index.html": "/index.html",
+    "main.a7a6e0fa.css.map": "/static/css/main.a7a6e0fa.css.map",
+    "main.e8695384.js.map": "/static/js/main.e8695384.js.map",
+    "429.baffb7c8.chunk.css.map": "/static/css/429.baffb7c8.chunk.css.map",
+    "429.12d125a2.chunk.js.map": "/static/js/429.12d125a2.chunk.js.map",
+    "406.be4ec81b.chunk.css.map": "/static/css/406.be4ec81b.chunk.css.map",
+    "406.83bebaf5.chunk.js.map": "/static/js/406.83bebaf5.chunk.js.map",
+    "351.957cdbd9.chunk.css.map": "/static/css/351.957cdbd9.chunk.css.map",
+    "351.5ae5b737.chunk.js.map": "/static/js/351.5ae5b737.chunk.js.map",
+    "498.957cdbd9.chunk.css.map": "/static/css/498.957cdbd9.chunk.css.map",
+    "498.b9c445aa.chunk.js.map": "/static/js/498.b9c445aa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a7a6e0fa.css",
+    "static/js/main.e8695384.js"
+  ]
+}
