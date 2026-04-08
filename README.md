@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# VTM Character Creator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web app for creating characters for **Vampire: The Masquerade**. Includes a dice rolling system and will be expanded in the future to support other World of Darkness games, such as **Mage: The Ascension**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## English
 
-### `npm start`
+### Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**VTM Character Creator** is a simple tool for creating and managing characters for Vampire: The Masquerade. It also includes a built-in dice rolling system to streamline gameplay.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Future updates**: The project will continue to evolve, with planned support for other games like Mage: The Ascension.
 
-### `npm test`
+### Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Create and manage Vampire: The Masquerade characters
+- Integrated dice rolling system
+- Simple, web-based interface
+- Future support for other World of Darkness games
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/ferca9494/vtm_character_creator.git
+    ```
+2. Open the project folder:
+    ```bash
+    cd vtm_character_creator
+    ```
+3. Open `index.html` in your web browser.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+No additional dependencies are required.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Español
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Descripción
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**VTM Character Creator** es una herramienta sencilla para crear y gestionar personajes de Vampire: La Mascarada. Incluye un sistema integrado de tiradas de dados para facilitar el juego.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Próximas actualizaciones**: El proyecto seguirá en desarrollo, planeando soporte para otros juegos como Mago: La Ascensión.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Características
 
-## Learn More
+- Crea y administra personajes de Vampire: La Mascarada
+- Sistema integrado de tiradas de dados
+- Interfaz web simple y fácil de usar
+- Futuro soporte para otros juegos de Mundo de Tinieblas
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Instalación
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clona el repositorio:
+    ```bash
+    git clone https://github.com/ferca9494/vtm_character_creator.git
+    ```
+2. Abre la carpeta del proyecto:
+    ```bash
+    cd vtm_character_creator
+    ```
+3. Abre `index.html` en tu navegador web.
 
-### Code Splitting
+No se requieren dependencias adicionales.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Roadmap
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [x] Vampire: The Masquerade character creation and dice system
+- [ ] Mage: The Ascension support (coming soon!)
+- [ ] More World of Darkness games and features
