@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Conceptos from "../../Data/Conceptolist.js";
+import Conceptos from "../../Data/Conceptolist.json";
 
 const ConceptosReact = ({
   ConceptoValue,

@@ -4,7 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import "../../Styles/JugarPersonaje.css";
 import Clans from "../../Data/Clanlist.js";
 import { Header } from "../Componentes/header.js";
-import { num_to_points } from "../Funciones/Extras.js";
+import { num_to_points, num_to_square } from "../Funciones/Extras.js";
 import { Tirada } from "../Funciones/Tiradas.js";
 import { Modal } from "../Componentes/Modal.js";
 import { Button } from "../Componentes/Button";
@@ -124,10 +124,11 @@ function JugarPersonaje() {
   const [modalContent, setModalContent] = useState(null);
   const [modalMode, setModalMode] = useState(null);
   const [, forceUpdate] = useState(0);
+  const [vistaFuerzaVoluntad, setvistaFuerzaVoluntad] = useState(Personaje ? Personaje.FuerzaVoluntad.Actual : 0);
 
   const isOpen = modalMode !== null;
 
-  const clanimg = useMemo(() => 
+  const clanimg = useMemo(() =>
     Personaje ? CLAN_IMAGES[Personaje.RasgosVampiricos.clan] : null,
     [Personaje]
   );
@@ -137,9 +138,9 @@ function JugarPersonaje() {
       const datoGuardado = localStorage.getItem("listaPersonajes");
       if (datoGuardado) {
         const personajes = JSON.parse(datoGuardado);
-        const updated = personajes.find(p => 
-          p.nombre === Personaje.nombre && 
-          p.RasgosVampiricos.clan === Personaje.RasgosVampiricos.clan && 
+        const updated = personajes.find(p =>
+          p.nombre === Personaje.nombre &&
+          p.RasgosVampiricos.clan === Personaje.RasgosVampiricos.clan &&
           p.RasgosVampiricos.generacion === Personaje.RasgosVampiricos.generacion
         );
         if (updated) setPersonajes(updated);
@@ -156,26 +157,26 @@ function JugarPersonaje() {
 
   const handleTiradaResult = useCallback((resTirada, Comentario) => {
     setModalContent(
-      <ModalContent_ResultadoTirada 
-        resTirada={resTirada} 
+      <ModalContent_ResultadoTirada
+        resTirada={resTirada}
         Comentario={Comentario}
         onRethrow={() => {
           const newTirada = Tirada(resTirada.cantidad);
           setModalContent(
-            <ModalContent_ResultadoTirada 
-              resTirada={newTirada} 
+            <ModalContent_ResultadoTirada
+              resTirada={newTirada}
               Comentario={Comentario}
               onRethrow={() => {
                 const anotherTirada = Tirada(resTirada.cantidad);
                 setModalContent(
-                  <ModalContent_ResultadoTirada 
-                    resTirada={anotherTirada} 
+                  <ModalContent_ResultadoTirada
+                    resTirada={anotherTirada}
                     Comentario={Comentario}
                     onRethrow={() => {
                       const yetAnotherTirada = Tirada(resTirada.cantidad);
                       setModalContent(
-                        <ModalContent_ResultadoTirada 
-                          resTirada={yetAnotherTirada} 
+                        <ModalContent_ResultadoTirada
+                          resTirada={yetAnotherTirada}
                           Comentario={Comentario}
                           onRethrow={arguments.callee}
                         />
@@ -195,14 +196,16 @@ function JugarPersonaje() {
   const handleGastarFV = useCallback(() => {
     try {
       const listaPersonajes = JSON.parse(localStorage.getItem("listaPersonajes"));
-      const per = listaPersonajes.find((e) => 
-        e.nombre === Personaje.nombre && 
-        e.RasgosVampiricos.clan === Personaje.RasgosVampiricos.clan && 
+      const per = listaPersonajes.find((e) =>
+        e.nombre === Personaje.nombre &&
+        e.RasgosVampiricos.clan === Personaje.RasgosVampiricos.clan &&
         e.RasgosVampiricos.generacion === Personaje.RasgosVampiricos.generacion
       );
 
       if (per && per.FuerzaVoluntad.Actual > 0) {
         per.FuerzaVoluntad.Actual--;
+        setvistaFuerzaVoluntad(per.FuerzaVoluntad.Actual);
+
         localStorage.setItem("listaPersonajes", JSON.stringify(listaPersonajes));
         forceUpdate(n => n + 1);
         handleCloseModal();
@@ -226,14 +229,15 @@ function JugarPersonaje() {
   const curarFV = useCallback(() => {
     try {
       const listaPersonajes = JSON.parse(localStorage.getItem("listaPersonajes"));
-      const per = listaPersonajes.find((e) => 
-        e.nombre === Personaje.nombre && 
-        e.RasgosVampiricos.clan === Personaje.RasgosVampiricos.clan && 
+      const per = listaPersonajes.find((e) =>
+        e.nombre === Personaje.nombre &&
+        e.RasgosVampiricos.clan === Personaje.RasgosVampiricos.clan &&
         e.RasgosVampiricos.generacion === Personaje.RasgosVampiricos.generacion
       );
 
       if (per) {
         per.FuerzaVoluntad.Actual = per.FuerzaVoluntad.Maximo;
+        setvistaFuerzaVoluntad(per.FuerzaVoluntad.Actual);
         localStorage.setItem("listaPersonajes", JSON.stringify(listaPersonajes));
         refreshPersonaje();
       }
@@ -245,9 +249,9 @@ function JugarPersonaje() {
   const eliminarPersonaje = useCallback(() => {
     try {
       const listaPersonajes = JSON.parse(localStorage.getItem("listaPersonajes"));
-      const perIndex = listaPersonajes.findIndex((e) => 
-        e.nombre === Personaje.nombre && 
-        e.RasgosVampiricos.clan === Personaje.RasgosVampiricos.clan && 
+      const perIndex = listaPersonajes.findIndex((e) =>
+        e.nombre === Personaje.nombre &&
+        e.RasgosVampiricos.clan === Personaje.RasgosVampiricos.clan &&
         e.RasgosVampiricos.generacion === Personaje.RasgosVampiricos.generacion
       );
       listaPersonajes.splice(perIndex, 1);
@@ -267,15 +271,15 @@ function JugarPersonaje() {
     switch (modalMode) {
       case "habilidad":
         return (
-          <ModalContent_TiradaHabilidad 
-            Personaje={Personaje} 
-            onResult={handleTiradaResult} 
+          <ModalContent_TiradaHabilidad
+            Personaje={Personaje}
+            onResult={handleTiradaResult}
           />
         );
       case "fv":
         return (
-          <ModalContent_TiradaFuerzaVoluntad 
-            Personaje={Personaje} 
+          <ModalContent_TiradaFuerzaVoluntad
+            Personaje={Personaje}
             onResult={handleTiradaResult}
             onGastar={handleGastarFV}
           />
@@ -321,9 +325,59 @@ function JugarPersonaje() {
     );
   }, [Personaje]);
 
+  const renderVentajas = useMemo(() => {
+    if (!Personaje) return null;
+
+    return (
+      <>
+        <h3>Trasfondos</h3>
+        {Personaje.trasfondos.map((item, index) => (
+          <div key={`trasfondo-${index}`}><b>{item.nombre}</b> {num_to_points(item.valor)}</div>
+        ))}
+        <h3>Disciplinas</h3>
+        {Personaje.RasgosVampiricos.disciplinas.map((item, index) => (
+          <div key={`disciplina-${index}`}><b>{item.nombre}</b> {num_to_points(item.valor)}</div>
+        ))}
+        <h3>Virtudes</h3>
+        <div key={`virtud-conciencia`}><b>Conciencia</b> {num_to_points(Personaje.RasgosVampiricos.virtudes.conciencia)}</div>
+        <div key={`virtud-autocontrol`}><b>AutoControl</b> {num_to_points(Personaje.RasgosVampiricos.virtudes.autocontrol)}</div>
+        <div key={`virtud-coraje`}><b>Coraje</b> {num_to_points(Personaje.RasgosVampiricos.virtudes.coraje)}</div>
+        {Personaje.RasgosVampiricos.virtudes.conviccion > 0 ? (
+          <div key={`virtud-conviccion`}><b>Conviccion</b> {num_to_points(Personaje.RasgosVampiricos.virtudes.conviccion)}</div>
+        ) : null}
+        {Personaje.RasgosVampiricos.virtudes.instinto > 0 ? (
+          <div key={`virtud-instinto`}><b>Instinto</b> {num_to_points(Personaje.RasgosVampiricos.virtudes.instinto)}</div>
+        ) : null}
+      </>
+    );
+  }, [Personaje]);
+
+  const renderOtrosRasgos = useMemo(() => {
+    if (!Personaje) return null;
+
+    return (
+      <>
+        <h3>Otros Rasgos</h3>
+
+        <div key={`humanidad`}><b>Humanidad</b> <br />
+          {num_to_points(Personaje.humanidad, 10)}</div>
+        {
+          Personaje.RasgosVampiricos.senda != null ? <div key={`senda`}><b>{Personaje.RasgosVampiricos.senda.nombre}</b> <br />
+            {num_to_points(Personaje.RasgosVampiricos.senda.rango, 10)}</div> : null
+        }
+        <div key={`FuerzaVoluntad`}><b>Fuerza de Voluntad</b> <br />
+          {num_to_points(Personaje.FuerzaVoluntad.Maximo, 10)}<br />
+          {num_to_square(vistaFuerzaVoluntad, 10)}</div>
+
+      </>
+    );
+  }, [Personaje]);
+
+
   if (!Personaje) {
     return <div>Cargando...</div>;
   }
+
 
   return (
     <div className="App">
@@ -354,17 +408,6 @@ function JugarPersonaje() {
             <b>Cronica</b>: {Personaje.cronica}<br />
           </div>
 
-          <h2>Opciones</h2>
-          <div id="botones">
-            <Button onClick={() => openModal("habilidad")}>Tirada de Habilidad</Button><br /><br />
-            <Button onClick={() => openModal("fv")}>Tirada de Fuerza de Voluntad</Button><br /><br />
-            <Button onClick={curarFV}>Curar Fuerza de Voluntad ({Personaje.FuerzaVoluntad.Actual}/{Personaje.FuerzaVoluntad.Maximo})</Button><br /><br />
-            <Button onClick={descargarJSON}>Exportar personaje</Button><br /><br />
-            <Button onClick={() => window.print()}>Imprimir planilla</Button><br /><br />
-            <hr />
-            <Button>Editar personaje</Button><br /><br />
-            <Button variant="danger" onClick={eliminarPersonaje}>Eliminar personaje</Button><br /><br />
-          </div>
         </section>
         <section className="printable">
           <h2>Atributos</h2>
@@ -377,10 +420,34 @@ function JugarPersonaje() {
           <b>Percepción</b> {num_to_points(Personaje.atributos.percepcion)}<br />
           <b>Inteligencia</b> {num_to_points(Personaje.atributos.inteligencia)}<br />
           <b>Astucia</b> {num_to_points(Personaje.atributos.astucia)}<br />
-        </section>
-        <section className="printable">
           <h2>Habilidades</h2>
           {renderHabilidades}
+          <h2>Ventajas</h2>
+          {renderVentajas}
+          <h2>Otros Rasgos</h2>
+          <div key={`humanidad`}><b>Humanidad</b> <br />
+            {num_to_points(Personaje.humanidad, 10)}</div>
+          {
+            Personaje.RasgosVampiricos.senda != null ? <div key={`senda`}><b>{Personaje.RasgosVampiricos.senda.nombre}</b> <br />
+              {num_to_points(Personaje.RasgosVampiricos.senda.rango, 10)}</div> : null
+          }
+          <div key={`FuerzaVoluntad`}><b>Fuerza de Voluntad</b> <br />
+            {num_to_points(Personaje.FuerzaVoluntad.Maximo, 10)}<br />
+            {num_to_square(vistaFuerzaVoluntad, 10)}</div>
+        </section>
+        <section >
+
+          <h2>Opciones</h2>
+          <div id="botones">
+            <Button onClick={() => openModal("habilidad")}>Tirada de Habilidad</Button><br /><br />
+            <Button onClick={() => openModal("fv")}>Tirada de Fuerza de Voluntad</Button><br /><br />
+            <Button onClick={curarFV}>Curar Fuerza de Voluntad ({vistaFuerzaVoluntad}/{Personaje.FuerzaVoluntad.Maximo})</Button><br /><br />
+            <Button onClick={descargarJSON}>Exportar personaje</Button><br /><br />
+            <Button onClick={() => window.print()}>Imprimir planilla</Button><br /><br />
+            <hr />
+            <Button>Editar personaje</Button><br /><br />
+            <Button variant="danger" onClick={eliminarPersonaje}>Eliminar personaje</Button><br /><br />
+          </div>
         </section>
       </div>
     </div>

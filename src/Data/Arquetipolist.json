@@ -1,4 +1,4 @@
-export default [
+[
     "Adicto",
     "Aficionado",
     "Ajeno",
@@ -91,4 +91,4 @@ export default [
     "Visionario",
     "Vividor",
     "Vivisector"
-];
+]

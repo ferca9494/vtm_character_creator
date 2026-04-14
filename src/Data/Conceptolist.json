@@ -1,42 +1,48 @@
-export default [
+[
   {
-    tipo: "Artista",
-    ejemplos: [
+    "tipo": "Artista",
+    "ejemplos": [
       "Músico",
       "Estrella de cine",
       "Pintor",
       "Adicto a las discotecas",
-      "Modelo",
-    ],
+      "Modelo"
+    ]
   },
   {
-    tipo: "Animal Social",
-    ejemplos: [
+    "tipo": "Animal Social",
+    "ejemplos": [
       "Diletante",
       "Anfitrión",
       "Playboy",
       "Adulador",
-      "Soltero de oro",
-    ],
+      "Soltero de oro"
+    ]
   },
   {
-    tipo: "Criatura de la noche",
-    ejemplos: [
+    "tipo": "Criatura de la noche",
+    "ejemplos": [
       "Discotequero",
       "Cabeza rapada",
       "Punk",
       "Borracho",
       "Raver",
-      "Adicto",
-    ],
+      "Adicto"
+    ]
   },
   {
-    tipo: "Chico",
-    ejemplos: ["Niño", "Fugado", "Proscrito", "Golfo", "Pandillero"],
+    "tipo": "Chico",
+    "ejemplos": [
+      "Niño",
+      "Fugado",
+      "Proscrito",
+      "Golfo",
+      "Pandillero"
+    ]
   },
   {
-    tipo: "Criminal",
-    ejemplos: [
+    "tipo": "Criminal",
+    "ejemplos": [
       "Fugado",
       "Mafioso",
       "Camello",
@@ -44,77 +50,83 @@ export default [
       "Ladrón de coches",
       "Matón",
       "Ratero",
-      "Perista",
-    ],
+      "Perista"
+    ]
   },
   {
-    tipo: "Errante",
-    ejemplos: [
+    "tipo": "Errante",
+    "ejemplos": [
       "Mendigo",
       "Contrabandista",
       "Prostituta",
       "Drogadicto",
       "Peregrino",
       "Motorista",
-      "Jugador",
-    ],
+      "Jugador"
+    ]
   },
   {
-    tipo: "Extraño",
-    ejemplos: [
+    "tipo": "Extraño",
+    "ejemplos": [
       "Primitivo Urbano",
       "Refugiado",
       "Minoría",
-      "Teórico de conspiración",
-    ],
+      "Teórico de conspiración"
+    ]
   },
   {
-    tipo: "Intelectual",
-    ejemplos: [
+    "tipo": "Intelectual",
+    "ejemplos": [
       "Escritor",
       "Estudiante",
       "Científico",
       "Filósofo",
-      "Crítico social",
-    ],
+      "Crítico social"
+    ]
   },
   {
-    tipo: "Investigador",
-    ejemplos: [
+    "tipo": "Investigador",
+    "ejemplos": [
       "Detective",
       "Policía de paisano",
       "Agente gubernamental",
       "Detective privado",
-      "Cazador de brujas",
-    ],
+      "Cazador de brujas"
+    ]
   },
   {
-    tipo: "Operario",
-    ejemplos: [
+    "tipo": "Operario",
+    "ejemplos": [
       "Camionero",
       "Granjero",
       "Mano de obra",
       "Asalariado",
-      "Albañil",
-    ],
+      "Albañil"
+    ]
   },
   {
-    tipo: "Político",
-    ejemplos: [
+    "tipo": "Político",
+    "ejemplos": [
       "Juez",
       "Funcionario publico",
       "Consejero",
       "Asistente",
-      "Escritor de discursos",
-    ],
+      "Escritor de discursos"
+    ]
   },
   {
-    tipo: "Profesional",
-    ejemplos: ["Ingeniero", "Doctor", "Programador", "Abogado", "Industrial"],
+    "tipo": "Profesional",
+    "ejemplos": [
+      "Ingeniero",
+      "Doctor",
+      "Programador",
+      "Abogado",
+      "Industrial"
+    ]
   },
   {
-    tipo: "Otros",
-    ejemplos: [
+    "tipo": "Otros",
+    "ejemplos": [
       "Veterinario",
       "Técnico",
       "Cárpintero",
@@ -122,7 +134,7 @@ export default [
       "Chef",
       "Rebelde",
       "Periodista",
-      "Mago",
-    ],
-  },
-];
+      "Mago"
+    ]
+  }
+]

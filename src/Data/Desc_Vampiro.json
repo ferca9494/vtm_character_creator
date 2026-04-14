@@ -20,21 +20,125 @@
         "15": ""
     },
     "Clan": "el clan de tu personaje define su linaje y su relación con Caín, el padre de todos los vampiros. El clan determina los poderes y debilidades de tu personaje",
-    "Clanes": {
-        "Brujah": "Este clan está formado en gran parte por rebeldes, con o sin causa. Individualistas, locuaces y turbulentos, los Brujah sienten mucho afecto por la idea del cambio social, y en sus filas albergan a algunos de los más violentos vampiros de la Camarilla",
-        "Gangrel": "De todos los vampiros, los Gangrel son quizá los que están más cerca de su naturaleza interior. Estos nómadas solitarios se burlan de las constricciones de la sociedad, prefiriendo la comodidad de la vida salvaje. No se sabe cómo eluden la ira de los hombres lobo; puede que tenga algo que ver con el hecho de que los propios Gangrel sean cambiaformas. Cuando un mortal habla de un vampiro que se convierte en lobo o murciélago, probablemente habla de un Gangrel.",
-        "Malkavian": "Hasta los demás Condenados temen a los Malkavian. La sangre maldita de su clan ha contaminado sus mentes, con el resultado de que todos ellos están irremediablemente locos. Peor aún, su locura puede asumir casi cualquier forma, desde irresistibles tendencias homicidas hasta la catatonia. En muchos casos no hay forma de distinguir a un Malkavian de los miembros “sanos” de otros clanes. Los pocos cuyas psicosis son obvias están entre los vampiros más aterradores que acechan en las calles.",
-        "Nosferatu": "Los chiquillos de Caín reciben el nombre de “los Condenados”, y ningún vampiro lo refleja tanto como los desdichados Nosferatu. Mientras los demás Vástagos siguen pareciendo humanos y pueden mezclarse con la sociedad mortal, los Nosferatu están retorcidos y desfigurados por la maldición del vampirismo. Otros hablan de la marca que puso Caín sobre todo el clan por las monstruosas fechorías de su fundador Antediluviano. Sufren el desprecio y el rechazo de los demás Hijos de Caín, que los consideran repulsivos y sólo se relacionan con ellos si no hay más remedio.",
-        "Toreador": "A los Toreador se les llama muchas cosas: “degenerados”, “artistas”, “farsantes”, “hedonistas”... Pero cualquiera de estas etiquetas hace un flaco favor al clan. Dependiendo del individuo y de su estilo, los Toreador son elegantes y llamativos, brillantes y ridículos, visionarios y disipados. Quizá lo único que puede aplicarse con certeza a todos ellos es el celo estético de sus miembros. Haga lo que haga un Toreador, lo hace con pasión, y sea lo que sea, lo es con pasión.",
-        "Tremere": "Los reservados Tremere pueden ser vistos con odio, desconfianza, temor o desprecio, pero nunca con indiferencia. Los que han oído hablar de sus actos suelen sospechar de ellos... y con motivo, pues los Brujos se han ganado su apodo. Por sus propios medios han conseguido dominar una forma de magia vampírica con sus hechizos y rituales tan potente (si no más) como cualquier otro poder de la Sangre. Unido a la rígida jerarquía del clan y a la ardiente ambición tan común entre los Brujos, este poder es algo verdaderamente perturbador para quienes saben de lo que son capaces.",
-        "Ventrue": "Los Vástagos del clan Ventrue tienen una reputación de honorabilidad, gentileza y gusto impecable. Desde tiempos inmemoriales han sido el clan del liderazgo, haciendo cumplir las antiguas tradiciones y buscando dar forma al destino de los Vástagos. En las noches de antaño los Ventrue eran escogidos entre los nobles, los príncipes mercaderes y otros dueños del poder. Actualmente el clan recluta a sus miembros entre las acomodadas familias del “dinero viejo”, despiadados trepadores corporativos y políticos. Sea cual sea su origen, preservan la estabilidad y mantienen el orden en la Camarilla. ",
-        "Assamita": "De los desiertos de Oriente llegan los Assamitas, y llevan con ellos una nube de terror. Los Assamitas son conocidos en la sociedad vampírica como un clan de asesinos al servicio de cualquiera que pueda pagar su precio. Este precio es la vitae de otros Vástagos; para los Assamitas la diablerie es el mayor sacramento. ",
-        "Giovanni": "Los Giovanni son respetuosos, gentiles y educados. Rico más allá de lo imaginable, el clan Giovanni tiene sus raíces en una familia de príncipes comerciantes anterior al renacimiento. El clan conserva su hogar original en Venecia, una loggia de mil años de antigüedad justo fuera del centro. Ningún clan hace un espectáculo de la humildad y la propiedad como los Giovanni. Y ninguno esconde secretos tan blasfemos.",
-        "Ravnos": "Si algún clan fuese reconocido por su perverso sentido del humor, sería el Ravnos. Son embaucadores de primer orden, tejiendo ilusiones y mentiras en elaborados planes para separar a los tontos de cualquier cosa que deseen los Ravnos... ya sea riqueza, sangre o incluso la libertad de sus víctimas. Como Mefistófeles, o el Viejo Bribón, los Vástagos usan sus trucos con cualquiera con el que se topen, sea humano o vampiro, y ay de quien no pueda pagar los costes ocultos.",
-        "Seguidor de Set": "Los Seguidores de Set, o más comúnmente “Setitas”, son vistos con más desconfianza que cualquier otro clan. Sus lazos con la arquetípica Serpiente del mito son bien conocidos, y aumentados por sus perturbadores poderes. Son custodios de un conocimiento que, de acuerdo con lo que dice, es anterior incluso a la Primera Ciudad. Cuando entran en una ciudad, es casi inevitable que la estructura de poder de los Cainitas locales quede erosionada. Pero lo más perturbador de todo es que como clan comparten una oscura y poderosa fe: una fe en que la sangre de los dioses corre por sus frías venas.",
-        "Lasombra": "El clan Lasombra ha caído en desgracia... y sus miembros disfrutan de ello. A la vez elegantes y depredadores, los Lasombra guían (si es necesario, con el látigo) al Sabbat como una fuerza implacable. Volviendo la espalda a los humanos que fueron antaño, los Lasombra se entregan por completo a la oscura majestad del Abrazo. Asesinato, frenesí, depredación... ¿por qué temer a estas cosas, pregunta muchos Lasombra, si uno es un vampiro? Pero en contraste con los Tzimisce, por lo general los Lasombra no buscan rechazar todas las cosas mortales, sino modelarlas para su placer.",
-        "Tzimisce": "Si los Lasombra son el corazón del Sabbat, el clan Tzimisce es su alma. Hasta los demás vampiros se sienten incómodos cerca de estos siniestros Vástagos, y el apodo de “Demonios” les fue otorgado en noches del pasado por horrorizados miembros de otros clanes. La característica Disciplina de Vicisitud de los Tzimisce es el objeto de este temor; circulan historias de paralizantes deformidades provocadas por capricho, de fantasmales “experimentos” y torturas refinadas más allá de la comprensión y resistencia humana... o vampírica."
-    },
+    "Clanes": [
+        {
+            "Nombre": "Brujah",
+            "Desc": "Este clan está formado en gran parte por rebeldes, con o sin causa. Individualistas, locuaces y turbulentos, los Brujah sienten mucho afecto por la idea del cambio social, y en sus filas albergan a algunos de los más violentos vampiros de la Camarilla",
+            "Disc_principales": [
+                "Potencia",
+                "Celeridad",
+                "Precencia"
+            ]
+        },
+        {
+            "Nombre": "Gangrel",
+            "Desc": "De todos los vampiros, los Gangrel son quizá los que están más cerca de su naturaleza interior. Estos nómadas solitarios se burlan de las constricciones de la sociedad, prefiriendo la comodidad de la vida salvaje. No se sabe cómo eluden la ira de los hombres lobo; puede que tenga algo que ver con el hecho de que los propios Gangrel sean cambiaformas. Cuando un mortal habla de un vampiro que se convierte en lobo o murciélago, probablemente habla de un Gangrel.",
+            "Disc_principales": [
+                "Animalismo",
+                "Protean",
+                "Fortaleza"
+            ]
+        },
+        {
+            "Nombre": "Malkavian",
+            "Desc": "Hasta los demás Condenados temen a los Malkavian. La sangre maldita de su clan ha contaminado sus mentes, con el resultado de que todos ellos están irremediablemente locos. Peor aún, su locura puede asumir casi cualquier forma, desde irresistibles tendencias homicidas hasta la catatonia. En muchos casos no hay forma de distinguir a un Malkavian de los miembros \"sanos\" de otros clanes. Los pocos cuyas psicosis son obvias están entre los vampiros más aterradores que acechan en las calles.",
+            "Disc_principales": [
+                "Dementacion",
+                "Auspex",
+                "Ofuscacion"
+            ]
+        },
+        {
+            "Nombre": "Nosferatu",
+            "Desc": "Los chiquillos de Caín reciben el nombre de \"los Condenados\", y ningún vampiro lo refleja tanto como los desdichados Nosferatu. Mientras los demás Vástagos siguen pareciendo humanos y pueden mezclarse con la sociedad mortal, los Nosferatu están retorcidos y desfigurados por la maldición del vampirismo. Otros hablan de la marca que puso Caín sobre todo el clan por las monstruosas fechorías de su fundador Antediluviano. Sufren el desprecio y el rechazo de los demás Hijos de Caín, que los consideran repulsivos y sólo se relacionan con ellos si no hay más remedio.",
+            "Disc_principales": [
+                "Animalismo",
+                "Ofuscacion",
+                "Fortaleza"
+            ]
+        },
+        {
+            "Nombre": "Toreador",
+            "Desc": "A los Toreador se les llama muchas cosas: \"degenerados\", \"artistas\", \"farsantes\", \"hedonistas\"... Pero cualquiera de estas etiquetas hace un flaco favor al clan. Dependiendo del individuo y de su estilo, los Toreador son elegantes y llamativos, brillantes y ridículos, visionarios y disipados. Quizá lo único que puede aplicarse con certeza a todos ellos es el celo estético de sus miembros. Haga lo que haga un Toreador, lo hace con pasión, y sea lo que sea, lo es con pasión.",
+            "Disc_principales": [
+                "Auspex",
+                "Celeridad",
+                "Presencia"
+            ]
+        },
+        {
+            "Nombre": "Tremere",
+            "Desc": "Los reservados Tremere pueden ser vistos con odio, desconfianza, temor o desprecio, pero nunca con indiferencia. Los que han oído hablar de sus actos suelen sospechar de ellos... y con motivo, pues los Brujos se han ganado su apodo. Por sus propios medios han conseguido dominar una forma de magia vampírica con sus hechizos y rituales tan potente (si no más) como cualquier otro poder de la Sangre. Unido a la rígida jerarquía del clan y a la ardiente ambición tan común entre los Brujos, este poder es algo verdaderamente perturbador para quienes saben de lo que son capaces.",
+            "Disc_principales": [
+                "Auspex",
+                "Dominacion",
+                "Taumaturgia"
+            ]
+        },
+        {
+            "Nombre": "Ventrue",
+            "Desc": "Los Vástagos del clan Ventrue tienen una reputación de honorabilidad, gentileza y gusto impecable. Desde tiempos inmemoriales han sido el clan del liderazgo, haciendo cumplir las antiguas tradiciones y buscando dar forma al destino de los Vástagos. En las noches de antaño los Ventrue eran escogidos entre los nobles, los príncipes mercaderes y otros dueños del poder. Actualmente el clan recluta a sus miembros entre las acomodadas familias del \"dinero viejo\", despiadados trepadores corporativos y políticos. Sea cual sea su origen, preservan la estabilidad y mantienen el orden en la Camarilla.",
+            "Disc_principales": [
+                "Dominacion",
+                "Fortaleza",
+                "Presencia"
+            ]
+        },
+        {
+            "Nombre": "Assamita",
+            "Desc": "De los desiertos de Oriente llegan los Assamitas, y llevan con ellos una nube de terror. Los Assamitas son conocidos en la sociedad vampírica como un clan de asesinos al servicio de cualquiera que pueda pagar su precio. Este precio es la vitae de otros Vástagos; para los Assamitas la diablerie es el mayor sacramento.",
+            "Disc_principales": [
+                "Celeridad",
+                "Ofuscacion",
+                "Serpentis"
+            ]
+        },
+        {
+            "Nombre": "Giovanni",
+            "Desc": "Los Giovanni son respetuosos, gentiles y educados. Rico más allá de lo imaginable, el clan Giovanni tiene sus raíces en una familia de príncipes comerciantes anterior al renacimiento. El clan conserva su hogar original en Venecia, una loggia de mil años de antigüedad justo fuera del centro. Ningún clan hace un espectáculo de la humildad y la propiedad como los Giovanni. Y ninguno esconde secretos tan blasfemos.",
+            "Disc_principales": [
+                "Nigromancia",
+                "Potencia",
+                "Presencia"
+            ]
+        },
+        {
+            "Nombre": "Ravnos",
+            "Desc": "Si algún clan fuese reconocido por su perverso sentido del humor, sería el Ravnos. Son embaucadores de primer orden, tejiendo ilusiones y mentiras en elaborados planes para separar a los tontos de cualquier cosa que deseen los Ravnos... ya sea riqueza, sangre o incluso la libertad de sus víctimas. Como Mefistófeles, o el Viejo Bribón, los Vástagos usan sus trucos con cualquiera con el que se topen, sea humano o vampiro, y ay de quien no pueda pagar los costes ocultos.",
+            "Disc_principales": [
+                "Animalismo",
+                "Celeridad",
+                "Quimerismo"
+            ]
+        },
+        {
+            "Nombre": "Seguidor de Set",
+            "Desc": "Los Seguidores de Set, o más comúnmente \"Setitas\", son vistos con más desconfianza que cualquier otro clan. Sus lazos con la arquetípica Serpiente del mito son bien conocidos, y aumentados por sus perturbadores poderes. Son custodios de un conocimiento que, de acuerdo con lo que dice, es anterior incluso a la Primera Ciudad. Cuando entran en una ciudad, es casi inevitable que la estructura de poder de los Cainitas locales quede erosionada. Pero lo más perturbador de todo es que como clan comparten una oscura y poderosa fe: una fe en que la sangre de los dioses corre por sus frías venas.",
+            "Disc_principales": [
+                "Serpentis",
+                "Presencia",
+                "Ofuscacion"
+            ]
+        },
+        {
+            "Nombre": "Lasombra",
+            "Desc": "El clan Lasombra ha caído en desgracia... y sus miembros disfrutan de ello. A la vez elegantes y depredadores, los Lasombra guían (si es necesario, con el látigo) al Sabbat como una fuerza implacable. Volviendo la espalda a los humanos que fueron antaño, los Lasombra se entregan por completo a la oscura majestad del Abrazo. Asesinato, frenesí, depredación... ¿por qué temer a estas cosas, pregunta muchos Lasombra, si uno es un vampiro? Pero en contraste con los Tzimisce, por lo general los Lasombra no buscan rechazar todas las cosas mortales, sino modelarlas para su placer.",
+            "Disc_principales": [
+                "Dominacion",
+                "Obtenebracion",
+                "Potencia"
+            ]
+        },
+        {
+            "Nombre": "Tzimisce",
+            "Desc": "Si los Lasombra son el corazón del Sabbat, el clan Tzimisce es su alma. Hasta los demás vampiros se sienten incómodos cerca de estos siniestros Vástagos, y el apodo de \"Demonios\" les fue otorgado en noches del pasado por horrorizados miembros de otros clanes. La característica Disciplina de Vicisitud de los Tzimisce es el objeto de este temor; circulan historias de paralizantes deformidades provocadas por capricho, de fantasmales \"experimentos\" y torturas refinadas más allá de la comprensión y resistencia humana... o vampírica.",
+            "Disc_principales": [
+                "Auspex",
+                "Dominacion",
+                "Vicisitud"
+            ]
+        }
+    ],
     "Virtudes": {
         "Coraje": {
             "Desc": "",
@@ -104,8 +208,9 @@
             "10": ""
         }
     },
-    "Sendas": {
-        "Senda de la Sangre": {
+    "Sendas": [
+        {
+            "Nombre": "Senda de la Sangre",
             "Desc": "",
             "Niveles": {
                 "1": "",
@@ -120,7 +225,8 @@
                 "10": ""
             }
         },
-        "Senda de los Huesos": {
+        {
+            "Nombre": "Senda de los Huesos",
             "Desc": "",
             "Niveles": {
                 "1": "",
@@ -135,7 +241,8 @@
                 "10": ""
             }
         },
-        "Senda de la Metamorfosis": {
+        {
+            "Nombre": "Senda de la Metamorfosis",
             "Desc": "",
             "Niveles": {
                 "1": "",
@@ -150,7 +257,8 @@
                 "10": ""
             }
         },
-        "Senda de la Noche": {
+        {
+            "Nombre": "Senda de la Noche",
             "Desc": "",
             "Niveles": {
                 "1": "",
@@ -165,7 +273,8 @@
                 "10": ""
             }
         },
-        "Senda de la Paradoja": {
+        {
+            "Nombre": "Senda de la Paradoja",
             "Desc": "",
             "Niveles": {
                 "1": "",
@@ -180,7 +289,8 @@
                 "10": ""
             }
         },
-        "Senda del Tifón": {
+        {
+            "Nombre": "Senda del Tifón",
             "Desc": "",
             "Niveles": {
                 "1": "",
@@ -195,7 +305,7 @@
                 "10": ""
             }
         }
-    },
+    ],
     "Disciplinas": {
         "Animalismo": {
             "Desc": "La Bestia reside dentro de todas las criaturas, desde las ratas de las alcantarillas hasta los poderosos antiguos. La Disciplina del Animalismo permite al vampiro desarrollar una íntima e intensa conexión con su naturaleza primordial. No solo podrá comunicarse telepáticamente con las bestias menores, sino que también proyectará su propia fuerza de voluntad sobre ellas, obligándolas a cumplir sus deseos. Además, a medida que el vampiro crezca en poder podrá utilizar Animalismo para con trolar a la Bestia que reside en los mortales, e incluso en otros seres sobrenaturales. Un vampiro que carezca de esta Disciplina y de la Técnica Trato con Animales repelerá a las bestias, que se mostrarán inquietas en su presencia, a menudo hasta el punto de huir o de atacar. Por el contrario, esta Disciplina permite calmar Ce incluso atraer) a todos los animales menores. A los Gangrel se les reconoce como los maestros del Animalismo, aunque los clanes Nosferatu, Ravnos y Tzimisce disponen también de algún talento. Los Rasgos Manipulación y Carisma son vitales para los poderes de esta Disciplina. Cuanto más fuerte es la personalidad de un vampiro más fácilmente influirá en las criaturas.",
@@ -446,8 +556,9 @@
             }
         }
     },
-    "Transfondos": {
-        "Aliados": {
+    "Transfondos": [
+        {
+            "Nombre": "Aliados",
             "Desc": "",
             "Niveles": {
                 "1": "",
@@ -457,7 +568,8 @@
                 "5": ""
             }
         },
-        "Criados": {
+        {
+            "Nombre": "Criados",
             "Desc": "",
             "Niveles": {
                 "1": "",
@@ -467,7 +579,8 @@
                 "5": ""
             }
         },
-        "Contactos": {
+        {
+            "Nombre": "Contactos",
             "Desc": "",
             "Niveles": {
                 "1": "",
@@ -477,7 +590,8 @@
                 "5": ""
             }
         },
-        "Fama": {
+        {
+            "Nombre": "Fama",
             "Desc": "",
             "Niveles": {
                 "1": "",
@@ -487,7 +601,8 @@
                 "5": ""
             }
         },
-        "Generación": {
+        {
+            "Nombre": "Generación",
             "Desc": "",
             "Niveles": {
                 "1": "",
@@ -497,7 +612,8 @@
                 "5": ""
             }
         },
-        "Influencia": {
+        {
+            "Nombre": "Influencia",
             "Desc": "",
             "Niveles": {
                 "1": "",
@@ -507,7 +623,8 @@
                 "5": ""
             }
         },
-        "Mentor": {
+        {
+            "Nombre": "Mentor",
             "Desc": "",
             "Niveles": {
                 "1": "",
@@ -517,7 +634,8 @@
                 "5": ""
             }
         },
-        "Posición": {
+        {
+            "Nombre": "Posición",
             "Desc": "",
             "Niveles": {
                 "1": "",
@@ -527,7 +645,8 @@
                 "5": ""
             }
         },
-        "Rebaño": {
+        {
+            "Nombre": "Rebaño",
             "Desc": "",
             "Niveles": {
                 "1": "",
@@ -537,7 +656,8 @@
                 "5": ""
             }
         },
-        "Recursos": {
+        {
+            "Nombre": "Recursos",
             "Desc": "",
             "Niveles": {
                 "1": "",
@@ -547,5 +667,5 @@
                 "5": ""
             }
         }
-    }
+    ]
 }

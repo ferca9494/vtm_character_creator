@@ -1,0 +1,92 @@
+[
+    {
+        "generacion": 1,
+        "maximoRasgo": 10,
+        "maximoReservaSangre": 100,
+        "puntosPorTurno": 20
+    },
+    {
+        "generacion": 2,
+        "maximoRasgo": 10,
+        "maximoReservaSangre": 100,
+        "puntosPorTurno": 20
+    },
+    {
+        "generacion": 3,
+        "maximoRasgo": 10,
+        "maximoReservaSangre": 100,
+        "puntosPorTurno": 20
+    },
+    {
+        "generacion": 4,
+        "maximoRasgo": 9,
+        "maximoReservaSangre": 50,
+        "puntosPorTurno": 10
+    },
+    {
+        "generacion": 5,
+        "maximoRasgo": 8,
+        "maximoReservaSangre": 40,
+        "puntosPorTurno": 8
+    },
+    {
+        "generacion": 6,
+        "maximoRasgo": 7,
+        "maximoReservaSangre": 30,
+        "puntosPorTurno": 6
+    },
+    {
+        "generacion": 7,
+        "maximoRasgo": 6,
+        "maximoReservaSangre": 20,
+        "puntosPorTurno": 4
+    },
+    {
+        "generacion": 8,
+        "maximoRasgo": 5,
+        "maximoReservaSangre": 15,
+        "puntosPorTurno": 3
+    },
+    {
+        "generacion": 9,
+        "maximoRasgo": 5,
+        "maximoReservaSangre": 14,
+        "puntosPorTurno": 2
+    },
+    {
+        "generacion": 10,
+        "maximoRasgo": 5,
+        "maximoReservaSangre": 13,
+        "puntosPorTurno": 1
+    },
+    {
+        "generacion": 11,
+        "maximoRasgo": 5,
+        "maximoReservaSangre": 12,
+        "puntosPorTurno": 1
+    },
+    {
+        "generacion": 12,
+        "maximoRasgo": 5,
+        "maximoReservaSangre": 11,
+        "puntosPorTurno": 1
+    },
+    {
+        "generacion": 13,
+        "maximoRasgo": 5,
+        "maximoReservaSangre": 10,
+        "puntosPorTurno": 1
+    },
+    {
+        "generacion": 14,
+        "maximoRasgo": 5,
+        "maximoReservaSangre": 10,
+        "puntosPorTurno": 1
+    },
+    {
+        "generacion": 15,
+        "maximoRasgo": 5,
+        "maximoReservaSangre": 10,
+        "puntosPorTurno": 1
+    }
+]

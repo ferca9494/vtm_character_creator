@@ -1,4 +1,4 @@
-import Naturaleza from "../../Data/Arquetipolist.js";
+import Naturaleza from "../../Data/Arquetipolist.json";
 
 export const NaturalezasReact = ({ onChange }) => {
   return (
