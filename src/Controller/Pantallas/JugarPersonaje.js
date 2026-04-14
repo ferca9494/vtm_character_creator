@@ -3,11 +3,14 @@ import { useParams, useNavigate } from "react-router-dom";
 
 import "../../Styles/JugarPersonaje.css";
 import Clans from "../../Data/Clanlist.js";
+import DescGeneral from "../../Data/Desc_General.json";
 import { Header } from "../Componentes/header.js";
 import { num_to_points, num_to_square } from "../Funciones/Extras.js";
+import { healthdata } from "../Funciones/NivelesSalud.js";
 import { Tirada } from "../Funciones/Tiradas.js";
 import { Modal } from "../Componentes/Modal.js";
 import { Button } from "../Componentes/Button";
+import { jsx } from "react/jsx-runtime";
 
 function ModalContent_TiradaHabilidad({ Personaje, onResult }) {
   const [atributoReserva, setAtributoReserva] = useState(0);
@@ -77,6 +80,7 @@ function ModalContent_TiradaFuerzaVoluntad({ Personaje, onResult, onGastar }) {
       <Button onClick={handleTirada} disabled={disabled}>Tirada!</Button>
       <br /><br />o<br /><br />
       <Button variant="secondary" onClick={onGastar} disabled={disabled}>Gastar 1 Fuerza de Voluntad</Button>
+      <br /><br />
     </>
   );
 }
@@ -103,6 +107,79 @@ function ModalContent_ResultadoTirada({ resTirada, Comentario, onRethrow }) {
   );
 }
 
+function ModalContent_cambiarSalud({ Personaje }) {
+
+  const [tipoDanio, setTipoDanio] = useState("CC");
+  const [valorDanio, setValorDanio] = useState(0);
+  const [nivelSalud, setNivelSalud] = useState(Personaje.nivelSalud);
+
+  const saludInfo = useMemo(() => healthdata(Personaje.nivelSalud), [Personaje.nivelSalud]);
+
+  const aplicar = (tipoDanio, valorDanio, Personaje) => {
+
+    const listaPersonajes = JSON.parse(localStorage.getItem("listaPersonajes"));
+
+    console.log("Aplicando daño:", tipoDanio, valorDanio);
+
+    let nuevoSalud = [...nivelSalud];
+    let actualSalud = [...nivelSalud];
+
+    for (let i = 0; i < valorDanio; i++) {
+
+      if (tipoDanio == "CC") nuevoSalud[i] = 1;
+      else if (tipoDanio == "LL") nuevoSalud[i] = 2;
+      else if (tipoDanio == "AA") nuevoSalud[i] = 3;
+
+    }
+
+    let k = 0
+    for (let j = valorDanio; j < nuevoSalud.length; j++) {
+
+      nuevoSalud[j] = actualSalud[k];
+      k++;
+    }
+
+    console.log("2) nivel de salud antes:", actualSalud);
+    console.log("3) nivel de salud ahora:", nuevoSalud);
+
+    Personaje.nivelSalud = nuevoSalud;
+    setNivelSalud(nuevoSalud);
+
+    const updatedListaPersonajes = listaPersonajes.map(p => p.nombre === Personaje.nombre ? { ...Personaje, nivelSalud: nuevoSalud } : p);
+    localStorage.setItem("listaPersonajes", JSON.stringify(updatedListaPersonajes));
+  }
+
+  return (
+    <>
+      <div>
+        <h3>Salud actual del personaje</h3>
+        <b>{saludInfo.nombre}</b>
+        {nivelSalud.map((item, index) => {
+
+          let nombreSalud = DescGeneral.Tipos_Salud[index].Nombre;
+
+          let casilla = "□";
+          if (item === 1) casilla = "⧄";
+          else if (item === 2) casilla = "▣";
+          else if (item === 3) casilla = "■";
+          return (<div key={index}>{nombreSalud} {casilla}</div>)
+        })}
+
+      </div>
+      <hr />
+      <h3>Define tipo de daño y valor</h3>
+      <select onChange={(e) => setTipoDanio(e.target.value)}>
+        <option value="CC">Daño Contundente</option>
+        <option value="LL">Daño Letal</option>
+        <option value="AA">Daño Agrabado</option>
+      </select>
+      <input type="number" placeholder="Valor del daño..." value={valorDanio} min={1} max={10} onChange={(e) => setValorDanio(parseInt(e.target.value) || 0)} />
+      <br /><br />
+      <Button onClick={() => aplicar(tipoDanio, valorDanio, Personaje)} >Aplicar daño</Button>
+    </>
+  );
+}
+
 const CLAN_IMAGES = {};
 Clans.forEach(clan => {
   CLAN_IMAGES[clan.name] = clan.logoImg;
@@ -125,6 +202,9 @@ function JugarPersonaje() {
   const [modalMode, setModalMode] = useState(null);
   const [, forceUpdate] = useState(0);
   const [vistaFuerzaVoluntad, setvistaFuerzaVoluntad] = useState(Personaje ? Personaje.FuerzaVoluntad.Actual : 0);
+  const [vistaSalud, setvistaSalud] = useState(Personaje ? healthdata(Personaje.nivelSalud).nombre : "Saludable");
+  const [vistaHumanidad, setvistaHumanidad] = useState(Personaje ? Personaje.humanidad : 0);
+  const [vistaReservaSangre, setvistaReservaSangre] = useState(Personaje ? Personaje.RasgosVampiricos.reservaSangre.Actual : 0);
 
   const isOpen = modalMode !== null;
 
@@ -246,6 +326,47 @@ function JugarPersonaje() {
     }
   }, [Personaje, refreshPersonaje]);
 
+  const curarSalud = useCallback(() => {
+    try {
+      const listaPersonajes = JSON.parse(localStorage.getItem("listaPersonajes"));
+      const per = listaPersonajes.find((e) =>
+        e.nombre === Personaje.nombre &&
+        e.RasgosVampiricos.clan === Personaje.RasgosVampiricos.clan &&
+        e.RasgosVampiricos.generacion === Personaje.RasgosVampiricos.generacion
+      );
+
+      if (per) {
+        per.nivelSalud = [0, 0, 0, 0, 0, 0, 0];
+        setvistaSalud("Saludable");
+        localStorage.setItem("listaPersonajes", JSON.stringify(listaPersonajes));
+        refreshPersonaje();
+      }
+    } catch (e) {
+      console.warn("Error:", e);
+    }
+  }, [Personaje, refreshPersonaje]);
+
+  const calcularPerdidaHumanidad = useCallback(() => {
+    try {
+      const listaPersonajes = JSON.parse(localStorage.getItem("listaPersonajes"));
+      const per = listaPersonajes.find((e) =>
+        e.nombre === Personaje.nombre &&
+        e.RasgosVampiricos.clan === Personaje.RasgosVampiricos.clan &&
+        e.RasgosVampiricos.generacion === Personaje.RasgosVampiricos.generacion
+      );
+
+      if (per) {
+        per.humanidad--;
+        setvistaHumanidad(per.humanidad);
+        localStorage.setItem("listaPersonajes", JSON.stringify(listaPersonajes));
+        refreshPersonaje();
+      }
+    } catch (e) {
+      console.warn("Error:", e);
+    }
+  }, [Personaje, refreshPersonaje]);
+
+
   const eliminarPersonaje = useCallback(() => {
     try {
       const listaPersonajes = JSON.parse(localStorage.getItem("listaPersonajes"));
@@ -282,6 +403,12 @@ function JugarPersonaje() {
             Personaje={Personaje}
             onResult={handleTiradaResult}
             onGastar={handleGastarFV}
+          />
+        );
+      case "salud":
+        return (
+          <ModalContent_cambiarSalud
+            Personaje={Personaje}
           />
         );
       case "result":
@@ -352,32 +479,10 @@ function JugarPersonaje() {
     );
   }, [Personaje]);
 
-  const renderOtrosRasgos = useMemo(() => {
-    if (!Personaje) return null;
-
-    return (
-      <>
-        <h3>Otros Rasgos</h3>
-
-        <div key={`humanidad`}><b>Humanidad</b> <br />
-          {num_to_points(Personaje.humanidad, 10)}</div>
-        {
-          Personaje.RasgosVampiricos.senda != null ? <div key={`senda`}><b>{Personaje.RasgosVampiricos.senda.nombre}</b> <br />
-            {num_to_points(Personaje.RasgosVampiricos.senda.rango, 10)}</div> : null
-        }
-        <div key={`FuerzaVoluntad`}><b>Fuerza de Voluntad</b> <br />
-          {num_to_points(Personaje.FuerzaVoluntad.Maximo, 10)}<br />
-          {num_to_square(vistaFuerzaVoluntad, 10)}</div>
-
-      </>
-    );
-  }, [Personaje]);
-
 
   if (!Personaje) {
     return <div>Cargando...</div>;
   }
-
 
   return (
     <div className="App">
@@ -426,14 +531,17 @@ function JugarPersonaje() {
           {renderVentajas}
           <h2>Otros Rasgos</h2>
           <div key={`humanidad`}><b>Humanidad</b> <br />
-            {num_to_points(Personaje.humanidad, 10)}</div>
+            {num_to_points(vistaHumanidad, 10)}</div>
           {
             Personaje.RasgosVampiricos.senda != null ? <div key={`senda`}><b>{Personaje.RasgosVampiricos.senda.nombre}</b> <br />
               {num_to_points(Personaje.RasgosVampiricos.senda.rango, 10)}</div> : null
-          }
+          }<br />
           <div key={`FuerzaVoluntad`}><b>Fuerza de Voluntad</b> <br />
             {num_to_points(Personaje.FuerzaVoluntad.Maximo, 10)}<br />
-            {num_to_square(vistaFuerzaVoluntad, 10)}</div>
+            {num_to_square(vistaFuerzaVoluntad, 10)}</div><br />
+
+          <div key={`ReservaSangre`}><b>Reserva de Sangre</b> <br />
+            {num_to_square(vistaReservaSangre, Personaje.RasgosVampiricos.reservaSangre.Maximo)}</div>
         </section>
         <section >
 
@@ -441,12 +549,22 @@ function JugarPersonaje() {
           <div id="botones">
             <Button onClick={() => openModal("habilidad")}>Tirada de Habilidad</Button><br /><br />
             <Button onClick={() => openModal("fv")}>Tirada de Fuerza de Voluntad</Button><br /><br />
-            <Button onClick={curarFV}>Curar Fuerza de Voluntad ({vistaFuerzaVoluntad}/{Personaje.FuerzaVoluntad.Maximo})</Button><br /><br />
+            <Button onClick={curarFV} disabled={vistaFuerzaVoluntad >= Personaje.FuerzaVoluntad.Maximo}>
+              Curar Fuerza de Voluntad ({vistaFuerzaVoluntad}/{Personaje.FuerzaVoluntad.Maximo})
+            </Button><br /><br />
+            <Button onClick={() => openModal("salud")}>Cambiar Salud ({vistaSalud})</Button><br /><br />
+            <Button onClick={curarSalud} disabled={vistaSalud === "Saludable" || vistaSalud === "Muerto"}>
+              Curar Salud
+            </Button><br /><br />
+            <Button onClick={calcularPerdidaHumanidad} disabled={vistaHumanidad == 0} >
+              Perdida de Humanidad
+            </Button><br />
+            <hr /><br />
             <Button onClick={descargarJSON}>Exportar personaje</Button><br /><br />
-            <Button onClick={() => window.print()}>Imprimir planilla</Button><br /><br />
-            <hr />
+            <Button onClick={() => window.print()}>Imprimir planilla</Button><br />
+            <hr /><br />
             <Button>Editar personaje</Button><br /><br />
-            <Button variant="danger" onClick={eliminarPersonaje}>Eliminar personaje</Button><br /><br />
+            <Button variant="danger" onClick={eliminarPersonaje}>Eliminar personaje</Button><br />
           </div>
         </section>
       </div>

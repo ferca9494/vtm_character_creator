@@ -667,5 +667,14 @@
                 "5": ""
             }
         }
-    ]
+    ],
+    "Penalizaciones_Salud": {
+       "Mangullado": 0,
+        "Lastimado": -1,
+        "Lesionado": -1,
+        "Herido": -2,
+        "Malherido": -2,
+        "Tullido": -5,
+        "Incapacitado": 0
+    }
 }

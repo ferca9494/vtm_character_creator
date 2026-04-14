@@ -254,6 +254,7 @@ function NuevoPersonaje() {
       FuerzaVoluntad: { Actual: coraje, Maximo: coraje },
       trasfondos: trasfondosList,
       humanidad: conciencia + autocontrol,
+      nivelSalud: [0, 0, 0, 0, 0, 0, 0],
     };
     if (selectedTipoValue == "Vampiro") {
       nue_per.RasgosVampiricos = {
@@ -380,9 +381,9 @@ function NuevoPersonaje() {
         <section >
 
           <div>
-            <select onChange={(e) => {
+            <select onChange={(e) =>
               setSelectedTipoValue(e.target.value)
-            }}>
+            }>
               <option value="Vampiro">Vampiro</option>
               <option value="Humano">Humano</option>
               <option value="Mago">Mago</option>
@@ -869,7 +870,7 @@ function NuevoPersonaje() {
         title="Otros Rasgos"
         sec="6"
         actualsecction={actualsection}
-        onClickTerminar={()=> submit}
+        onClickTerminar={submit}
       >
         <section className="trisection">
           <div>
@@ -905,7 +906,7 @@ function NuevoPersonaje() {
 
         </section>
       </BulletSection>
-     
+
 
     </div>
   );

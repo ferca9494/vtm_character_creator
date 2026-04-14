@@ -5,6 +5,7 @@ export function Button({
     size = "md",
     type = "button",
     style = null,
+    disabled = false
 }) {
     const base = {
         border: "none",
@@ -33,7 +34,14 @@ export function Button({
             backgroundColor: "#dc2626",
             color: "white",
         },
+        disabled: {
+            backgroundColor: "#6d6d6d",
+            color: "white",
+        },
     };
+
+    if (disabled)
+        variant = "disabled";
 
     return (
         <button
@@ -47,6 +55,7 @@ export function Button({
             }}
             onMouseOver={(e) => (e.target.style.opacity = 0.85)}
             onMouseOut={(e) => (e.target.style.opacity = 1)}
+            disabled={onClick ? false : true}
         >
             {children}
         </button>

@@ -114,13 +114,35 @@
     },
     "Trasfondo": "",
     "Salud": "",
-    "Tipos_Salud": {
-        "Mangullado": "",
-        "Lastimado": "",
-        "Lesionado": "",
-        "Herido": "",
-        "Malherido": "",
-        "Tullido": "",
-        "Incapacitado": ""
-    }
+    "Tipos_Salud": [
+        {
+            "Nombre": "Mangullado",
+            "Desc": ""
+        },
+        {
+            "Nombre": "Lastimado",
+            "Desc": ""
+        },
+        {
+            "Nombre": "Lesionado",
+            "Desc": ""
+
+        },
+        {
+            "Nombre": "Herido",
+            "Desc": ""
+        },
+        {
+            "Nombre": "Malherido",
+            "Desc": ""
+        },
+        {
+            "Nombre": "Tullido",
+            "Desc": ""
+        },
+        {
+            "Nombre": "Incapacitado",
+            "Desc": ""
+        }
+    ]
 }
